@@ -16,7 +16,7 @@ function Sidebar() {
       />
 
       <h3 className="my-4 text-3xl font-medium tracking-wider font-kaushan">
-        <span> Stanisław</span> Marciniak
+        <span className="text-green"> Stanisław</span> Marciniak
       </h3>
       <p className="px-2 py-1 my-3 bg-gray-200 rounded-full">Web Developer</p>
       <a
@@ -48,10 +48,10 @@ function Sidebar() {
         <p className="my-2">stanislaw.marciniak@gmail.com</p>
         <p className="my-2">731 699 527</p>
       </div>
-      <button className="w-8/12 px-5 py-2 my-2 text-white rounded-full bg-gradient-to-r from-green-400 to-blue-400">
+      <button className="w-8/12 px-5 py-2 my-2 text-white rounded-full bg-gradient-to-r from-green to-blue-400">
         Email me
       </button>
-      <button className="w-8/12 px-5 py-2 my-2 text-white rounded-full bg-gradient-to-r from-green-400 to-blue-400">
+      <button className="w-8/12 px-5 py-2 my-2 text-white rounded-full bg-gradient-to-r from-green to-blue-400">
         Toggle Theme
       </button>
     </div>
