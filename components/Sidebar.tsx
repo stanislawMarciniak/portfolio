@@ -26,7 +26,7 @@ function Sidebar() {
       >
         <GiTie className="w-6 h-6" /> Download Resume
       </a>
-      <div className="flex justify-around w-9/12 mx-auto my-5 text-green-500 md:w-full">
+      <div className="flex justify-around w-9/12 mx-auto my-5 text-green md:w-full">
         <a href="">
           <AiFillYoutube className="w-8 h-8 cursor-pointer" />
         </a>
