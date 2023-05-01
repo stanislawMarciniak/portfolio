@@ -45,7 +45,9 @@ function Sidebar() {
           <GoLocation />
           <span>Łódź, Poland</span>
         </div>
-        <p className="my-2">stanislaw.marciniak@gmail.com</p>
+        <p className="my-2" style={{ wordWrap: "break-word" }}>
+          stanislaww.marciniak@gmail.com
+        </p>
         <p className="my-2">731 699 527</p>
       </div>
       <button
