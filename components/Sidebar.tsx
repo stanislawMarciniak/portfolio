@@ -48,7 +48,10 @@ function Sidebar() {
         <p className="my-2">stanislaw.marciniak@gmail.com</p>
         <p className="my-2">731 699 527</p>
       </div>
-      <button className="w-8/12 px-5 py-2 my-2 text-white rounded-full bg-gradient-to-r from-green to-blue-400">
+      <button
+        className="w-8/12 px-5 py-2 my-2 text-white rounded-full bg-gradient-to-r from-green to-blue-400 focus:outline-none"
+        onClick={() => window.open("mailto:stanislaww.marciniak@gmail.com")}
+      >
         Email me
       </button>
       <button className="w-8/12 px-5 py-2 my-2 text-white rounded-full bg-gradient-to-r from-green to-blue-400">
