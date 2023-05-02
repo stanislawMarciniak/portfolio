@@ -24,7 +24,7 @@ function Sidebar() {
         href=""
         download="name"
       >
-        <GiTie className="w-6 h-6" /> Download Resume
+        <GiTie className="w-6 h-6" /> Download CV
       </a>
       <div className="flex justify-around w-9/12 mx-auto my-5 text-green md:w-full">
         <a href="">

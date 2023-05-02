@@ -1,11 +1,11 @@
 import { RiComputerLine } from "react-icons/ri";
 import { BiGitBranch } from "react-icons/bi";
-
+import { BsCircleFill } from "react-icons/bs";
 import { FaServer, FaBookReader } from "react-icons/fa";
 import { AiOutlineApi } from "react-icons/ai";
 import { MdDeveloperMode } from "react-icons/md";
 
-import { IService } from "./type";
+import { IService, ISkill } from "./type";
 
 export const services: IService[] = [
   {
@@ -41,5 +41,51 @@ export const services: IService[] = [
     title: "Student",
     about:
       "day by day I work with computers and gain more and more knowledge about them in variety of fields!",
+  },
+];
+
+export const languages: ISkill[] = [
+  {
+    Icon: BsCircleFill,
+    name: "Python",
+  },
+  {
+    Icon: BsCircleFill,
+    name: "Java Script",
+  },
+  {
+    Icon: BsCircleFill,
+    name: "React Native",
+  },
+  {
+    Icon: BsCircleFill,
+    name: "React",
+  },
+  {
+    Icon: BsCircleFill,
+    name: "Django",
+  },
+  {
+    Icon: BsCircleFill,
+    name: "Bootstrap",
+  },
+];
+
+export const tools: ISkill[] = [
+  {
+    Icon: BsCircleFill,
+    name: "Figma",
+  },
+  {
+    Icon: BsCircleFill,
+    name: "Photoshop",
+  },
+  {
+    Icon: BsCircleFill,
+    name: "Illustrator",
+  },
+  {
+    Icon: BsCircleFill,
+    name: "Framer",
   },
 ];
