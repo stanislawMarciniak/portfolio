@@ -1,6 +1,8 @@
 import { RiComputerLine } from "react-icons/ri";
-import { FaServer } from "react-icons/fa";
-import { AiOutlineAntDesign, AiOutlineApi } from "react-icons/ai";
+import { BiGitBranch } from "react-icons/bi";
+
+import { FaServer, FaBookReader } from "react-icons/fa";
+import { AiOutlineApi } from "react-icons/ai";
 import { MdDeveloperMode } from "react-icons/md";
 
 import { IService } from "./type";
@@ -19,9 +21,9 @@ export const services: IService[] = [
       "handle  deploying, server and api using <b>Express </b> & other popular frameworks",
   },
   {
-    Icon: AiOutlineAntDesign,
+    Icon: BiGitBranch,
     title: "Git",
-    about: "using github daily, I make commits, merge and pull easily",
+    about: "using github daily, I make commits, merge and pulls easily",
   },
   {
     Icon: MdDeveloperMode,
@@ -35,7 +37,7 @@ export const services: IService[] = [
       "I can develop robust  REST API using <b>Node API</b> and I can test it using <b>Postman</b> or <b>REST</b> extension",
   },
   {
-    Icon: RiComputerLine,
+    Icon: FaBookReader,
     title: "Student",
     about:
       "day by day I work with computers and gain more and more knowledge about them in variety of fields!",
