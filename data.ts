@@ -74,18 +74,18 @@ export const languages: ISkill[] = [
 export const tools: ISkill[] = [
   {
     Icon: BsCircleFill,
-    name: "Figma",
+    name: "GitHub",
+  },
+  {
+    Icon: BsCircleFill,
+    name: "Linux",
+  },
+  {
+    Icon: BsCircleFill,
+    name: "Postman",
   },
   {
     Icon: BsCircleFill,
     name: "Photoshop",
-  },
-  {
-    Icon: BsCircleFill,
-    name: "Illustrator",
-  },
-  {
-    Icon: BsCircleFill,
-    name: "Framer",
   },
 ];
