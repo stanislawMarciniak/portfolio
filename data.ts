@@ -16,13 +16,12 @@ export const services: IService[] = [
     Icon: FaServer,
     title: "Backend  Development",
     about:
-      "handle database, server, api using <b>Express </b> & other popular frameworks",
+      "handle  deploying, server and api using <b>Express </b> & other popular frameworks",
   },
   {
-    Icon: AiOutlineApi,
-    title: "API Development",
-    about:
-      "I can develop robust  REST API using <b>django-rest-api</b>  & <b>Node API</b> ",
+    Icon: AiOutlineAntDesign,
+    title: "Git",
+    about: "using github daily, I make commits, merge and pull easily",
   },
   {
     Icon: MdDeveloperMode,
@@ -30,15 +29,15 @@ export const services: IService[] = [
     about: "a daily problem solver in <b>HackerRank</b>  and <b>Leet Code</b> ",
   },
   {
-    Icon: AiOutlineAntDesign,
-    title: "UI/UX designer",
+    Icon: AiOutlineApi,
+    title: "API Development",
     about:
-      "stunning user interface designer using <b>Figma</b>  and  <b>Framer</b> ",
+      "I can develop robust  REST API using <b>Node API</b> and I can test it using <b>Postman</b> or <b>REST</b> extension",
   },
   {
     Icon: RiComputerLine,
-    title: "Whatever",
+    title: "Student",
     about:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis minima autem!",
+      "day by day I work with computers and gain more and more knowledge about them in variety of fields!",
   },
 ];
