@@ -28,7 +28,7 @@ export const services: IService[] = [
   {
     Icon: MdDeveloperMode,
     title: "Competitive Coder",
-    about: "a daily problem solver in <b>HackerRank</b>  and <b>Leet Code</b> ",
+    about: "a daily problem solver in <b>SPOJ</b>  and <b>Leet Code</b> ",
   },
   {
     Icon: AiOutlineApi,
