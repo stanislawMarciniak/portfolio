@@ -128,7 +128,7 @@ export const projects: IProject[] = [
 
   {
     name: "Resume",
-    image_path: "/images/resume.png",
+    image_path: "/images/resume4.png",
     deployed_url: "https://cv-sm.netlify.app",
     github_url: "https://github.com/stanislawMarciniak/CV",
     description:
