@@ -93,18 +93,18 @@ export const tools: ISkill[] = [
 export const projects: IProject[] = [
   {
     name: "TIC TAC TOE",
-    image_path: "/images/covid.jpg",
+    image_path: "/images/tictactoe.png",
     deployed_url: "https://tictactoe-sm.netlify.app",
-    github_url: "https://github.com/Dey-Sumit/covid-19-tracker",
+    github_url: "https://github.com/stanislawMarciniak/tictactoe_online",
     description:
       "This app shows a statistical view about corona virus over the world",
     key_techs: ["React", "Chart.js", "Material UI"],
   },
   {
     name: "Weather app",
-    image_path: "/images/algoVisual.png",
+    image_path: "/images/weather.png",
     deployed_url: "https://weather-forecast-app-sm.netlify.app",
-    github_url: "https://github.com/Dey-Sumit/algorithm-visualizer",
+    github_url: "https://github.com/stanislawMarciniak/weather-app",
     description:
       "An web app which shows how an algorithm (path finding or sorting) works with cool animation",
     key_techs: ["React", "firebase", "Framer Motion"],
@@ -112,9 +112,9 @@ export const projects: IProject[] = [
 
   {
     name: "Portfolio",
-    image_path: "/images/chatapp.jpg",
+    image_path: "/images/portfolio.png",
     deployed_url: "https://portfolio-s-m.netlify.app",
-    github_url: "https://github.com/Dey-Sumit/chat-app-socket.io-react-node",
+    github_url: "https://github.com/stanislawMarciniak/portfolio",
     description:
       "Basic Realtime Chat App where one can create a room can talk to each other",
     key_techs: ["React", "Node", "Express", "Socket", "Bootstrap"],
@@ -124,7 +124,7 @@ export const projects: IProject[] = [
     name: "Resume",
     image_path: "/images/algoVisual.png",
     deployed_url: "https://cv-sm.netlify.app",
-    github_url: "https://github.com/Dey-Sumit/algorithm-visualizer",
+    github_url: "https://github.com/stanislawMarciniak/CV",
     description:
       "An web app which shows how an algorithm (path finding or sorting) works with cool animation",
     key_techs: ["React", "firebase", "Framer Motion"],
