@@ -92,34 +92,41 @@ export const tools: ISkill[] = [
 
 export const projects: IProject[] = [
   {
-    name: "COVID Tracker",
+    name: "TIC TAC TOE",
+    image_path: "/images/covid.jpg",
+    deployed_url: "https://tictactoe-sm.netlify.app",
+    github_url: "https://github.com/Dey-Sumit/covid-19-tracker",
     description:
       "This app shows a statistical view about corona virus over the world",
-    image_path: "/images/covid.jpg",
-    deployed_url: "https://covid-19-tracker-by-sumit.web.app/",
-    github_url: "https://github.com/Dey-Sumit/covid-19-tracker",
-    category: ["react"],
     key_techs: ["React", "Chart.js", "Material UI"],
   },
   {
-    name: "Algorithm Visualizer",
+    name: "Weather app",
     image_path: "/images/algoVisual.png",
-    deployed_url: "https://visual-algorithm.web.app/",
+    deployed_url: "https://weather-forecast-app-sm.netlify.app",
     github_url: "https://github.com/Dey-Sumit/algorithm-visualizer",
-    category: ["react"],
     description:
       "An web app which shows how an algorithm (path finding or sorting) works with cool animation",
     key_techs: ["React", "firebase", "Framer Motion"],
   },
 
   {
-    name: "Realtime Chat App",
+    name: "Portfolio",
     image_path: "/images/chatapp.jpg",
-    deployed_url: "https://sumit-chat.netlify.app/",
+    deployed_url: "https://portfolio-s-m.netlify.app",
     github_url: "https://github.com/Dey-Sumit/chat-app-socket.io-react-node",
-    category: ["node", "react"],
     description:
       "Basic Realtime Chat App where one can create a room can talk to each other",
     key_techs: ["React", "Node", "Express", "Socket", "Bootstrap"],
+  },
+
+  {
+    name: "Resume",
+    image_path: "/images/algoVisual.png",
+    deployed_url: "https://cv-sm.netlify.app",
+    github_url: "https://github.com/Dey-Sumit/algorithm-visualizer",
+    description:
+      "An web app which shows how an algorithm (path finding or sorting) works with cool animation",
+    key_techs: ["React", "firebase", "Framer Motion"],
   },
 ];
