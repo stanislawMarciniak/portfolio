@@ -24,11 +24,11 @@ function Sidebar() {
       <h3 className="my-4 text-3xl font-medium tracking-wider font-kaushan">
         <span className="text-green"> Stanisław</span> Marciniak
       </h3>
-      <p className="px-2 py-1 my-3 bg-gray-200 rounded-full dark:bg-dark-200 dark:bg-black-500">
+      <p className="px-2 py-1 my-3 bg-gray-200 rounded-full">
         Aspiring Web Developer
       </p>
       <a
-        className="flex items-center justify-center px-2 py-1 my-2 bg-gray-200 rounded-full cursor-pointer dark:bg-dark-200 dark:bg-black-500"
+        className="flex items-center justify-center px-2 py-1 my-3 bg-gray-200 rounded-full "
         href="/resume.pdf"
         download="Stanisław Marciniak - CV"
       >
@@ -46,7 +46,7 @@ function Sidebar() {
         </a>
       </div>
       <div
-        className="py-4 my-5 bg-gray-200 dark:bg-dark-200 dark:bg-black-500"
+        className="py-4 my-5 bg-gray-200"
         style={{ marginLeft: "-1rem", marginRight: "-1rem" }}
       >
         <div className="flex items-center justify-center space-x-2">
