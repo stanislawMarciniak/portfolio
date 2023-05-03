@@ -97,17 +97,24 @@ export const projects: IProject[] = [
     deployed_url: "https://tictactoe-sm.netlify.app",
     github_url: "https://github.com/stanislawMarciniak/tictactoe_online",
     description:
-      "This app shows a statistical view about corona virus over the world",
-    key_techs: ["React", "Chart.js", "Material UI"],
+      "This app is a WebSocket application that enables two players on different devices to play the game in real-time and chat with each other. The game also features a login and registration page and uses cookies for user authentication",
+    key_techs: [
+      "React",
+      "Getstream.io",
+      "Axios",
+      "Express",
+      "Universal Cookies",
+      "Bcrypt",
+    ],
   },
   {
     name: "Weather app",
-    image_path: "/images/weather.png",
+    image_path: "/images/weather1.png",
     deployed_url: "https://weather-forecast-app-sm.netlify.app",
     github_url: "https://github.com/stanislawMarciniak/weather-app",
     description:
-      "An web app which shows how an algorithm (path finding or sorting) works with cool animation",
-    key_techs: ["React", "firebase", "Framer Motion"],
+      "An extensive weather application that provides daily and hourly forecasts for a searched city or the user's current location",
+    key_techs: ["React", "Tailwind", "API"],
   },
 
   {
@@ -115,18 +122,17 @@ export const projects: IProject[] = [
     image_path: "/images/portfolio.png",
     deployed_url: "https://portfolio-s-m.netlify.app",
     github_url: "https://github.com/stanislawMarciniak/portfolio",
-    description:
-      "Basic Realtime Chat App where one can create a room can talk to each other",
-    key_techs: ["React", "Node", "Express", "Socket", "Bootstrap"],
+    description: "A webpage that serves as a hub for all my other projects",
+    key_techs: ["Next.js", "Tailwind", "Typescript"],
   },
 
   {
     name: "Resume",
-    image_path: "/images/algoVisual.png",
+    image_path: "/images/resume.png",
     deployed_url: "https://cv-sm.netlify.app",
     github_url: "https://github.com/stanislawMarciniak/CV",
     description:
-      "An web app which shows how an algorithm (path finding or sorting) works with cool animation",
-    key_techs: ["React", "firebase", "Framer Motion"],
+      "Basic resume project made to train the basics of the frontend development",
+    key_techs: ["CSS", "HTML"],
   },
 ];
