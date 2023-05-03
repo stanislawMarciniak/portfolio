@@ -5,7 +5,7 @@ import { FaServer, FaBookReader } from "react-icons/fa";
 import { AiOutlineApi } from "react-icons/ai";
 import { MdDeveloperMode } from "react-icons/md";
 
-import { IService, ISkill } from "./type";
+import { IProject, IService, ISkill } from "./types";
 
 export const services: IService[] = [
   {
@@ -47,7 +47,7 @@ export const services: IService[] = [
 export const languages: ISkill[] = [
   {
     Icon: BsCircleFill,
-    name: "Python",
+    name: "Tailwind",
   },
   {
     Icon: BsCircleFill,
@@ -55,7 +55,7 @@ export const languages: ISkill[] = [
   },
   {
     Icon: BsCircleFill,
-    name: "React Native",
+    name: "Type Script",
   },
   {
     Icon: BsCircleFill,
@@ -63,11 +63,11 @@ export const languages: ISkill[] = [
   },
   {
     Icon: BsCircleFill,
-    name: "Django",
+    name: "Node.js",
   },
   {
     Icon: BsCircleFill,
-    name: "Bootstrap",
+    name: "Next.js",
   },
 ];
 
@@ -87,5 +87,39 @@ export const tools: ISkill[] = [
   {
     Icon: BsCircleFill,
     name: "Photoshop",
+  },
+];
+
+export const projects: IProject[] = [
+  {
+    name: "COVID Tracker",
+    description:
+      "This app shows a statistical view about corona virus over the world",
+    image_path: "/images/covid.jpg",
+    deployed_url: "https://covid-19-tracker-by-sumit.web.app/",
+    github_url: "https://github.com/Dey-Sumit/covid-19-tracker",
+    category: ["react"],
+    key_techs: ["React", "Chart.js", "Material UI"],
+  },
+  {
+    name: "Algorithm Visualizer",
+    image_path: "/images/algoVisual.png",
+    deployed_url: "https://visual-algorithm.web.app/",
+    github_url: "https://github.com/Dey-Sumit/algorithm-visualizer",
+    category: ["react"],
+    description:
+      "An web app which shows how an algorithm (path finding or sorting) works with cool animation",
+    key_techs: ["React", "firebase", "Framer Motion"],
+  },
+
+  {
+    name: "Realtime Chat App",
+    image_path: "/images/chatapp.jpg",
+    deployed_url: "https://sumit-chat.netlify.app/",
+    github_url: "https://github.com/Dey-Sumit/chat-app-socket.io-react-node",
+    category: ["node", "react"],
+    description:
+      "Basic Realtime Chat App where one can create a room can talk to each other",
+    key_techs: ["React", "Node", "Express", "Socket", "Bootstrap"],
   },
 ];

@@ -1,4 +1,4 @@
-import { ISkill } from "@/type";
+import { ISkill } from "@/types";
 import React, { FunctionComponent } from "react";
 
 const Bar: FunctionComponent<{
