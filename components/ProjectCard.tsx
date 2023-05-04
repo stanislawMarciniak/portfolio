@@ -24,7 +24,7 @@ const ProjectCard: FunctionComponent<{
       <Image
         src={image_path}
         alt={name}
-        className="overflow-hidden cursor-pointer hover:scale-105"
+        className="overflow-hidden cursor-pointer hover:scale-95"
         onClick={() => setShowDetail(true)}
         layout="responsive"
         height="150"

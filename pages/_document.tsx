@@ -7,11 +7,11 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
           rel="stylesheet"
         />
       </Head>
-      <body className="bg-fixed bg-gradient-to-r from-green to-blue-500 dark:from-dark-700 dark:to-dark-700 dark:text-white">
+      <body className="bg-fixed font-poppins bg-gradient-to-r from-green-700 to-green-400 dark:from-gray-900 dark:to-dark-700 dark:text-gray-300">
         <Main />
         <NextScript />
       </body>

@@ -4,7 +4,7 @@ module.exports = {
   darkMode: "class",
   theme: {
     fontFamily: {
-      kaushan: ["Kaushan Script"],
+      poppins: ["Poppins"],
     },
     boxShadow: {
       "custom-light": " 0 0 10px #313131",
@@ -13,7 +13,8 @@ module.exports = {
     extend: {
       colors: {
         green: {
-          DEFAULT: "#00f260",
+          DEFAULT: "#2E8B57",
+          // DEFAULT: "#00FFFF",
         },
         dark: {
           DEFAULT: "#010101",
