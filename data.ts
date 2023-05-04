@@ -119,7 +119,7 @@ export const projects: IProject[] = [
 
   {
     name: "Portfolio",
-    image_path: "/images/portfolio.png",
+    image_path: "/images/portfolio2.png",
     deployed_url: "https://portfolio-s-m.netlify.app",
     github_url: "https://github.com/stanislawMarciniak/portfolio",
     description: "A webpage that serves as a hub for all my other projects",

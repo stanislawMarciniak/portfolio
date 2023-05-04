@@ -21,9 +21,9 @@ const index = () => {
         </i>
         ). I love to learn new things and technologies thats why I am looking
         for first work experience. I would like to broaden my horizonts with
-        practical knowledge. I am enthusiast of group work and I love to
-        experiment with creating new code! I am motivated and ready to work hard
-        and develop my coding skills.
+        practical knowledge. In my free time I like reading economy books and
+        playing chess! I am motivated and ready to work hard and develop my
+        coding skills.
       </h5>
       <div
         className="flex-grow p-4 mt-5 bg-green-700 dark:bg-dark-100"
