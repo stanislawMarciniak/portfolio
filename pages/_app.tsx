@@ -6,7 +6,6 @@ import type { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
 
 export default function App({ Component, pageProps }: AppProps) {
-  // what
   return (
     <ThemeProvider attribute="class">
       <div className="grid grid-cols-12 gap-6 px-5 lg:px-48 my-14 sm:px-20 md:px-32">
