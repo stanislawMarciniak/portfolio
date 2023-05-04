@@ -21,16 +21,18 @@ const ProjectCard: FunctionComponent<{
 
   return (
     <div>
-      <Image
-        src={image_path}
-        alt={name}
-        className="overflow-hidden cursor-pointer hover:scale-95"
-        onClick={() => setShowDetail(true)}
-        layout="responsive"
-        height="150"
-        width="300"
-      />
-      <p className="my-2 text-center">{name}</p>
+      <div className=" dark:hover:text-darkgreen">
+        <Image
+          src={image_path}
+          alt={name}
+          className="overflow-hidden cursor-pointer hover:scale-95"
+          onClick={() => setShowDetail(true)}
+          layout="responsive"
+          height="150"
+          width="300"
+        />
+        <p className="my-2 text-center">{name}</p>
+      </div>
 
       {showDetail && (
         <div className="absolute top-0 left-0 z-10 grid w-full h-auto p-2 text-black bg-gray-100 md:grid-cols-2 gap-x-12 dark:text-white dark:bg-dark-100">

@@ -15,7 +15,7 @@ const NavItems: FunctionComponent<{
         onClick={() => {
           setActiveItem(name);
         }}
-        className="hover:text-green"
+        className="hover:text-green dark:hover:text-darkgreen"
       >
         {name}
       </span>
@@ -35,7 +35,7 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-between px-5 py-3 my-3">
-      <span className="text-xl font-bold border-b-4 text-green border-green md:text-2xl">
+      <span className="text-xl font-bold border-b-4 text-green dark:text-darkgreen border-green md:text-2xl">
         {activeItem}
       </span>
       <div className="flex space-x-5 text-lg">
