@@ -25,11 +25,11 @@ const ProjectCard: FunctionComponent<{
         <Image
           src={image_path}
           alt={name}
-          className="overflow-hidden cursor-pointer hover:scale-95"
+          className="rounded-md cursor-pointer hover:scale-95"
           onClick={() => setShowDetail(true)}
           layout="responsive"
-          height="150"
-          width="300"
+          height={300}
+          width={300}
         />
         <p className="my-2 text-center">{name}</p>
       </div>
@@ -41,8 +41,8 @@ const ProjectCard: FunctionComponent<{
               src={image_path}
               alt={name}
               layout="responsive"
-              height="150"
-              width="300"
+              height={300}
+              width={300}
             />
             <div className="flex justify-center my-4 space-x-3">
               <a
