@@ -8,14 +8,14 @@ const Bar: FunctionComponent<{
 
   return (
     <span
-      className="relative flex items-center justify-center w-12 h-12 my-5 rounded-full bg-gradient-to-r from-green to-darkgreen"
+      className="relative flex items-center justify-center w-20 h-20 my-6 rounded-full bg-gradient-to-r from-green to-darkgreen"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <Icon className="text-3xl text-white" />
+      <Icon className="text-5xl text-white" />
       {isHovered && (
         <span
-          className="absolute left-0 right-0 text-sm text-center"
+          className="absolute left-0 right-0 mt-2 text-xl text-center"
           style={{ top: "100%" }}
         >
           {name}

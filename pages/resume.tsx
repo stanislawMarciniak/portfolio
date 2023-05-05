@@ -31,16 +31,21 @@ const resume = () => {
       </div>
       <div className="grid gap-6 mt-6 md:grid-cols-2">
         <div>
-          <h5 className="my-6 text-2xl font-bold">Languages & Frameworks</h5>
-          <div className="my-2">
+          <h5 className="my-6 text-2xl font-bold text-center">
+            Languages & Frameworks
+          </h5>
+
+          <div className="grid grid-cols-2 place-items-center xl:grid-cols-3 ">
             {languages.map((language, id) => (
               <Bar data={language} key={id} />
             ))}
           </div>
         </div>
         <div>
-          <h5 className="my-6 text-2xl font-bold">Tools & Softwares</h5>
-          <div className="my-2">
+          <h5 className="my-6 text-2xl font-bold text-center">
+            Tools & Softwares
+          </h5>
+          <div className="grid grid-cols-2 my-2 lg:px-20 gap-x-1 place-items-center">
             {tools.map((tool, id) => (
               <Bar data={tool} key={id} />
             ))}
