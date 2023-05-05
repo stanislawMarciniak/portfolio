@@ -1,9 +1,18 @@
 import { RiComputerLine } from "react-icons/ri";
 import { BiGitBranch } from "react-icons/bi";
-import { BsCircleFill } from "react-icons/bs";
 import { FaServer, FaBookReader } from "react-icons/fa";
 import { AiOutlineApi } from "react-icons/ai";
 import { MdDeveloperMode } from "react-icons/md";
+import {
+  SiGithub,
+  SiLinux,
+  SiPostman,
+  SiTailwindcss,
+  SiTypescript,
+  SiNodedotjs,
+  SiNextdotjs,
+} from "react-icons/si";
+import { DiJavascript, DiReact } from "react-icons/di";
 
 import { IProject, IService, ISkill } from "./types";
 
@@ -46,47 +55,47 @@ export const services: IService[] = [
 
 export const languages: ISkill[] = [
   {
-    Icon: BsCircleFill,
+    Icon: SiTailwindcss,
     name: "Tailwind",
   },
   {
-    Icon: BsCircleFill,
-    name: "Java Script",
+    Icon: DiJavascript,
+    name: "JavaScript",
   },
   {
-    Icon: BsCircleFill,
-    name: "Type Script",
+    Icon: SiTypescript,
+    name: "TypeScript",
   },
   {
-    Icon: BsCircleFill,
+    Icon: DiReact,
     name: "React",
   },
   {
-    Icon: BsCircleFill,
+    Icon: SiNodedotjs,
     name: "Node.js",
   },
   {
-    Icon: BsCircleFill,
+    Icon: SiNextdotjs,
     name: "Next.js",
   },
 ];
 
 export const tools: ISkill[] = [
   {
-    Icon: BsCircleFill,
+    Icon: SiGithub,
     name: "GitHub",
   },
   {
-    Icon: BsCircleFill,
+    Icon: SiLinux,
     name: "Linux",
   },
   {
-    Icon: BsCircleFill,
+    Icon: SiPostman,
     name: "Postman",
   },
   {
-    Icon: BsCircleFill,
-    name: "Photoshop",
+    Icon: AiOutlineApi,
+    name: "REST API",
   },
 ];
 
@@ -128,7 +137,7 @@ export const projects: IProject[] = [
 
   {
     name: "Resume",
-    image_path: "/images/resume4.png",
+    image_path: "/images/resume5.png",
     deployed_url: "https://cv-sm.netlify.app",
     github_url: "https://github.com/stanislawMarciniak/CV",
     description:
