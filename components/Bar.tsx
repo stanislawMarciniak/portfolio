@@ -15,7 +15,7 @@ const Bar: FunctionComponent<{
       <Icon className="text-5xl text-white" />
       {isHovered && (
         <span
-          className="absolute left-0 right-0 mt-2 text-xl text-center"
+          className="absolute left-0 right-0 mt-2 text-base text-center bg-green-300 rounded-xl"
           style={{ top: "100%" }}
         >
           {name}
