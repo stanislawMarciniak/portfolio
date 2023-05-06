@@ -45,7 +45,7 @@ const resume = () => {
           <h5 className="my-6 text-2xl font-bold text-center">
             Tools & Softwares
           </h5>
-          <div className="grid grid-cols-2 my-2 lg:px-20 gap-x-1 place-items-center">
+          <div className="grid grid-cols-2 my-2 xl:px-20 gap-x-1 place-items-center">
             {tools.map((tool, id) => (
               <Bar data={tool} key={id} />
             ))}

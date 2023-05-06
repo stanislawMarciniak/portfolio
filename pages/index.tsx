@@ -9,18 +9,8 @@ const index = () => {
         <i>
           <a href="https://p.lodz.pl/"> University of Technology</a>
         </i>
-        (majoring in{" "}
-        <i>
-          <a href="https://rekrutacja.p.lodz.pl/pl/information-technology-i-stopnia-centrum-ksztalcenia-miedzynarodowego-ife">
-            information technology
-          </a>
-        </i>{" "}
-        on{" "}
-        <i>
-          <a href="https://www.ife.p.lodz.pl/">IFE</a>
-        </i>
-        ). I love to learn new things and technologies thats why I am looking
-        for first work experience. I would like to broaden my horizonts with
+        . I love to learn new things and technologies thats why I am looking for
+        first work experience. I would like to broaden my horizonts with
         practical knowledge. In my free time I like reading economy books and
         playing chess! I am motivated and ready to work hard and develop my
         coding skills.

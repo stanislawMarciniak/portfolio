@@ -95,7 +95,7 @@ export const tools: ISkill[] = [
   },
   {
     Icon: AiOutlineApi,
-    name: "REST API",
+    name: "RESTAPI",
   },
 ];
 
