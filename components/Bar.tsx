@@ -18,7 +18,7 @@ const Bar: FunctionComponent<{
       </div>
 
       <span
-        className={`px-5 text-center text-xl bg-green-300 rounded-xl dark:text-dark-700 transition-opacity duration-300 ${opacity}`}
+        className={` text-center text-2xl text-green rounded-xl transition-opacity duration-300 ${opacity}`}
         style={{ marginTop: "5rem" }}
       >
         {name}

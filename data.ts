@@ -11,6 +11,7 @@ import {
   SiTypescript,
   SiNodedotjs,
   SiNextdotjs,
+  SiCplusplus,
 } from "react-icons/si";
 import { DiJavascript, DiReact } from "react-icons/di";
 
@@ -77,6 +78,10 @@ export const languages: ISkill[] = [
   {
     Icon: SiNextdotjs,
     name: "Next.js",
+  },
+  {
+    Icon: SiCplusplus,
+    name: "C++",
   },
 ];
 

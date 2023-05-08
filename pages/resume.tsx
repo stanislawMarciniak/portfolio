@@ -29,7 +29,7 @@ const resume = () => {
           </div>
         </div>
       </div>
-      <div className="grid gap-6 mt-6 md:grid-cols-2">
+      <div className="grid gap-6 mt-6 mb-3 md:grid-cols-2">
         <div>
           <h5 className="my-6 text-2xl font-bold text-center">
             Languages & Frameworks

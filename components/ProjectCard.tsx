@@ -1,4 +1,10 @@
-import { FunctionComponent, useState } from "react";
+import {
+  FunctionComponent,
+  RefObject,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { AiFillGithub, AiFillProject } from "react-icons/ai";
 import { MdClose } from "react-icons/md";
 import { IProject } from "../types";
@@ -18,9 +24,25 @@ const ProjectCard: FunctionComponent<{
   },
 }) => {
   const [showDetail, setShowDetail] = useState(false);
+  const ref: RefObject<HTMLDivElement> = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (ref.current && !ref.current.contains(event.target as Node)) {
+        setTimeout(() => {
+          setShowDetail(false);
+        }, 70);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [ref]);
 
   return (
-    <div>
+    <div ref={ref}>
       <div className=" dark:hover:text-darkgreen">
         <Image
           src={image_path}
