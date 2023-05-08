@@ -26,7 +26,7 @@ function Sidebar() {
         Aspiring Fullstack Developer
       </p>
       <a
-        className="flex items-center justify-center px-2 py-1 my-3 bg-green-200 rounded-full  hover:text-green dark:hover:text-darkgreen dark:bg-dark-200 dark:bg-black-500"
+        className="flex items-center justify-center px-2 py-1 my-3 bg-green-200 rounded-full hover:text-green dark:hover:text-darkgreen dark:bg-dark-200 dark:bg-black-500"
         href="/resume.pdf"
         download="Stanisław Marciniak - CV"
       >
@@ -49,13 +49,13 @@ function Sidebar() {
           <span>Łódź, Poland</span>
         </div>
         <p className="my-2" style={{ wordWrap: "break-word" }}>
-          stanislaww.marciniak@gmail.com
+          marciniak.dev@gmail.com
         </p>
         <p className="my-2">731 699 527</p>
       </div>
       <button
         className="w-8/12 px-5 py-2 my-2 text-white rounded-full bg-gradient-to-r from-green to-green-500 dark:from-green-700 dark:to-green-600 focus:outline-none hover:scale-105"
-        onClick={() => window.open("mailto:stanislaww.marciniak@gmail.com")}
+        onClick={() => window.open("mailto:marciniak.dev@gmail.com")}
       >
         Email me
       </button>
