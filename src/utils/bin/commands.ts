@@ -44,13 +44,19 @@ export const email = async (args: string[]): Promise<string> => {
 };
 
 export const github = async (args: string[]): Promise<string> => {
-  window.open(`https://github.com/${config.social.github}/`);
+  window.open(config.social.github);
 
   return "Opening github...";
 };
 
+export const repo = async (args: string[]): Promise<string> => {
+  window.open(config.repo);
+
+  return "Opening repository...";
+};
+
 export const linkedin = async (args: string[]): Promise<string> => {
-  window.open(`https://www.linkedin.com/in/${config.social.linkedin}/`);
+  window.open(config.social.linkedin);
 
   return "Opening linkedin...";
 };

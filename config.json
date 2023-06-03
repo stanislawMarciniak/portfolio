@@ -1,5 +1,4 @@
 {
-  "readmeUrl": "",
   "title": "Portfolio - Stanisław Marciniak",
   "name": "Stanisław Marciniak",
   "social": {
@@ -9,7 +8,7 @@
   "email": "marciniak.dev@gmail.com",
   "ps1_hostname": "portfolio",
   "ps1_username": "visitor",
-  "repo": "",
+  "repo": "https://github.com/stanislawMarciniak/portfolio-v.2/tree/master",
   
   "colors": {
     "dark": {
