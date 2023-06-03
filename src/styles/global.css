@@ -12,6 +12,11 @@
   font-family: 'Hack', monospace;
 }
 
+body {
+  background: url('../../public/bg.svg') no-repeat;
+  background-size: cover;
+}
+
 html,
 body,
 body > div:first-child,

@@ -1,10 +1,10 @@
-import Head from 'next/head';
-import React from 'react';
-import config from '../../config.json';
-import { Input } from '../components/input';
-import { useHistory } from '../components/history/hook';
-import { History } from '../components/history/History';
-import { banner } from '../utils/bin';
+import Head from "next/head";
+import React from "react";
+import config from "../../config.json";
+import { Input } from "../components/input";
+import { useHistory } from "../components/history/hook";
+import { History } from "../components/history/History";
+import { banner } from "../utils/bin";
 
 interface IndexPageProps {
   inputRef: React.MutableRefObject<HTMLInputElement>;
@@ -41,8 +41,8 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
         <title>{config.title}</title>
       </Head>
 
-      <div className="p-8 overflow-hidden h-full border-2 rounded border-light-yellow dark:border-dark-yellow">
-        <div ref={containerRef} className="overflow-y-auto h-full">
+      <div className="h-full p-8 overflow-hidden border-2 rounded border-light-yellow dark:border-dark-yellow">
+        <div ref={containerRef} className="h-full overflow-y-auto">
           <History history={history} />
 
           <Input
