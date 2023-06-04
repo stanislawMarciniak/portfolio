@@ -24,7 +24,7 @@ const App = ({ Component, pageProps }) => {
         className="flex items-center justify-center text-xs text-light-foreground dark:text-dark-foreground min-w-max md:min-w-full md:text-base"
         onClick={onClickAnywhere}
       >
-        <main className="w-2/3 p-2 h-5/6 bg-light-background dark:bg-dark-background rounded-2xl">
+        <main className="w-2/3 p-2 shadow-2xl h-5/6 bg-light-background dark:bg-dark-background rounded-2xl">
           <Component {...pageProps} inputRef={inputRef} />
         </main>
       </div>

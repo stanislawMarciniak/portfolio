@@ -24,8 +24,9 @@ Type 'sumfetch' to display summary.
 
 // About
 export const about = async (args: string[]): Promise<string> => {
-  return `Hi, I am ${config.name}. 
-Welcome to my website!
+  return `
+My name is <b>Stanisław</b>! I am a freshman at<i><a href="https://p.lodz.pl/"> University of Technology</a></i>. I love to learn new things and technologies thats why I am looking for first work experience as a <b>Fullstack Developer</b>. I would like to broaden my horizonts with practical knowledge. Currently, I am learning TypeScript and Docker. I am motivated and ready to work hard and develop my coding skills.  
+
 More about me:
 'sumfetch' - short summary.
 'resume' - my latest resume.
@@ -33,7 +34,8 @@ More about me:
 };
 
 export const resume = async (args: string[]): Promise<string> => {
-  window.open(`${config.resume_url}`);
+  const pdfUrl = "/resumecv.pdf";
+  window.open(pdfUrl);
   return "Opening resume...";
 };
 
@@ -44,7 +46,7 @@ export const email = async (args: string[]): Promise<string> => {
 };
 
 export const github = async (args: string[]): Promise<string> => {
-  window.open(config.social.github);
+  window.open(`https://github.com/${config.social.github}`);
 
   return "Opening github...";
 };
@@ -56,7 +58,7 @@ export const repo = async (args: string[]): Promise<string> => {
 };
 
 export const linkedin = async (args: string[]): Promise<string> => {
-  window.open(config.social.linkedin);
+  window.open(`https://linkedin.com/in/${config.social.linkedin}`);
 
   return "Opening linkedin...";
 };
