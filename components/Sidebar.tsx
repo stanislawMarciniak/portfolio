@@ -27,19 +27,25 @@ function Sidebar() {
       </p>
       <a
         className="flex items-center justify-center px-2 py-1 my-3 bg-green-200 rounded-full hover:text-green dark:hover:text-darkgreen dark:bg-dark-200 dark:bg-black-500"
-        href="/resume.pdf"
+        href="/resumecv.pdf"
         download="Stanisław Marciniak - CV"
       >
         <GiTie className="w-6 h-6" /> Download CV
       </a>
       <div className="flex justify-around w-9/12 mx-auto my-5 dark:text-darkgreen text-green md:w-full ">
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">
+        <a
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
+          target="_blank"
+        >
           <AiFillYoutube className="w-8 h-8 cursor-pointer hover:scale-105" />
         </a>
-        <a href="https://github.com/stanislawMarciniak">
+        <a href="https://github.com/stanislawMarciniak" target="_blank">
           <AiFillGithub className="w-8 h-8 cursor-pointer hover:scale-105" />
         </a>
-        <a href="https://www.linkedin.com/in/stanis%C5%82aw-marciniak-490640246/">
+        <a
+          href="https://www.linkedin.com/in/stanis%C5%82aw-marciniak-490640246/"
+          target="_blank"
+        >
           <AiFillLinkedin className="w-8 h-8 cursor-pointer hover:scale-105" />
         </a>
       </div>
