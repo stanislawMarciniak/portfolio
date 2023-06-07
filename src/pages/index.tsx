@@ -34,8 +34,9 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
     }
   };
 
-  React.useEffect(() => {
+  const init = () => {
     if (history.length > 0) {
+      console.log(history.length);
       setHistory([
         {
           ...history[0],
@@ -43,15 +44,21 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
         },
         ...history.slice(1),
       ]);
-    } else pushHistory(banner(getSize()));
+    } else {
+      pushHistory(banner(getSize()));
+    }
+  };
+
+  React.useEffect(() => {
+    init();
 
     const handleResize = () => {
-      setHistory([
+      setHistory((prevHistory) => [
         {
-          ...history[0],
+          ...prevHistory[0],
           output: banner(getSize()),
         },
-        ...history.slice(1),
+        ...prevHistory.slice(1),
       ]);
     };
 

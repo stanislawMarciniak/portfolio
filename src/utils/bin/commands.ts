@@ -37,16 +37,12 @@ export const resume = async (args: string[]): Promise<string> => {
 };
 
 // Contact
-export const email = async (args: string[]): Promise<string> => {
-  window.open(`mailto:${config.email}`);
-
-  return `Opening mailto:${config.email}...`;
-};
-
-export const github = async (args: string[]): Promise<string> => {
-  window.open(`https://github.com/${config.social.github}`);
-
-  return "Opening github...";
+export const contact = async (args: string[]): Promise<string> => {
+  return `
+  Mail: <a target="_blank" class='link' href='mailto:${config.email}'>${config.email}</a>
+  Github: <a target="_blank" class='link' href='https://github.com/${config.social.github}'>${config.social.github}</a>
+  Linkedin: <a target="_blank" class='link' href='https://linkedin.com/in/${config.social.linkedin}'>Stanisław Marciniak</a>
+  `;
 };
 
 export const repo = async (args: string[]): Promise<string> => {
@@ -55,8 +51,15 @@ export const repo = async (args: string[]): Promise<string> => {
   return "Opening repository...";
 };
 
-export const linkedin = async (args: string[]): Promise<string> => {
-  window.open(`https://linkedin.com/in/${config.social.linkedin}`);
+//Projects
+export const projects = async (args: string[]): Promise<string> => {
+  return "Projects...";
+};
 
-  return "Opening linkedin...";
+//EXIT && OPEN
+export const exit = async (args: string[]): Promise<string> => {
+  return "Closing termina...";
+};
+export const open = async (args: string[]): Promise<string> => {
+  return "Opening termina...";
 };

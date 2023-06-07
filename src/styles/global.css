@@ -28,12 +28,12 @@ div#__next > div {
 
 .command {
   color: #73ABAD;
-  text-shadow: 0 0 5px #73ABAD; 
+  text-shadow: 0 0 3px #73ABAD; 
 }
 
 .link {
   color: #80ad73;
-  text-shadow: 0 0 5px #80ad73; 
+  text-shadow: 0 0 3px #80ad73; 
 }
 
 ::-webkit-scrollbar {
@@ -47,10 +47,10 @@ div#__next > div {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ebdbb2;
+  background: #73ABAD;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ff8037;
+  background: #2edce2;
 }

@@ -2,9 +2,9 @@ import config from "../../config.json";
 
 export const banner = (arg?: string): string => {
   const defaultMessage = `
-  Type <span class='command'>help</span> to see the list of available commands.
-  Type <span class='command'>repo</span> or click <a class="link text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a> for the Github repository.
-  Type <span class='command'>exit</span> if you prefer typical form of portfolio.
+Type <span class='command'>help</span> to see the list of available commands.
+Type <span class='command'>repo</span> or click <a class="link text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a> for the Github repository.
+Type <span class='command'>exit</span> if you prefer typical form of portfolio.
   `;
 
   const xlAscii = `
