@@ -22,7 +22,32 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
     setLastCommandIndex,
   } = useHistory([]);
 
-  const init = React.useCallback(() => setHistory(banner()), []);
+  const getSize = () => {
+    const screenWidth = window.innerWidth;
+    if (screenWidth >= 1554) {
+      return "xl";
+    } else if (screenWidth >= 1161) {
+      return "md";
+    } else {
+      return "sm";
+    }
+  };
+
+  const init = React.useCallback(() => setHistory(banner(getSize())), []);
+
+  React.useEffect(() => {
+    init();
+
+    const handleResize = () => {
+      setHistory(banner(getSize()));
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [init]);
 
   React.useEffect(() => {
     init();
