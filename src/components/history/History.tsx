@@ -6,7 +6,7 @@ export const History: React.FC<{ history: Array<HistoryInterface> }> = ({
   history,
 }) => {
   return (
-    <>
+    <div>
       {history.map((entry: HistoryInterface, index: number) => (
         <div key={entry.command + index}>
           <div className="flex flex-row space-x-2">
@@ -18,13 +18,13 @@ export const History: React.FC<{ history: Array<HistoryInterface> }> = ({
           </div>
 
           <p
-            className="whitespace-pre-wrap mb-2"
-            style={{ lineHeight: "normal" }}
+            className="whitespace-pre-wrap"
+            style={{ lineHeight: "1.3" }}
             dangerouslySetInnerHTML={{ __html: entry.output }}
           />
         </div>
       ))}
-    </>
+    </div>
   );
 };
 

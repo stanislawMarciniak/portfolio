@@ -23,9 +23,9 @@ export const whoami = async (args: string[]): Promise<string> => {
 My name is <b>Stanisław</b>! I am a freshman at<a class="link" href="https://p.lodz.pl/"> University of Technology</a>. I love to learn new things and technologies thats why I am looking for first work experience as a <b>Fullstack Developer</b>. I would like to broaden my horizonts with practical knowledge. Currently, I am learning TypeScript and Docker. I am motivated and ready to work hard and develop my coding skills.  
 
 More about me:
-  <span class='command'>contact</span> - my social media.
-  <span class='command'>resume</span> - my latest resume.
-  <span class='command'>projects</span> - lists my latest projects.
+<span class='command'>contact</span> - my social media.
+<span class='command'>resume</span> - my latest resume.
+<span class='command'>projects</span> - lists my latest projects.\n
 `;
 };
 
@@ -39,10 +39,10 @@ export const resume = async (args: string[]): Promise<string> => {
 // Contact
 export const contact = async (args: string[]): Promise<string> => {
   return `
-  Mail: <a target="_blank" class='link' href='mailto:${config.email}'>${config.email}</a>
-  Github: <a target="_blank" class='link' href='https://github.com/${config.social.github}'>${config.social.github}</a>
-  Linkedin: <a target="_blank" class='link' href='https://linkedin.com/in/${config.social.linkedin}'>Stanisław Marciniak</a>
-  `;
+Mail: <a target="_blank" class='link' href='mailto:${config.email}'>${config.email}</a>
+Github: <a target="_blank" class='link' href='https://github.com/${config.social.github}'>${config.social.github}</a>
+Linkedin: <a target="_blank" class='link' href='https://linkedin.com/in/${config.social.linkedin}'>Stanisław Marciniak</a>\n
+`;
 };
 
 export const repo = async (args: string[]): Promise<string> => {
