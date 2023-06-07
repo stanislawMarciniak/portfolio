@@ -31,6 +31,11 @@ div#__next > div {
   text-shadow: 0 0 5px #73ABAD; 
 }
 
+.link {
+  color: #80ad73;
+  text-shadow: 0 0 5px #80ad73; 
+}
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;

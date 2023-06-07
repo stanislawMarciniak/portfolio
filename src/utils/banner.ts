@@ -4,11 +4,11 @@ export const banner = (arg?: string): string => {
   const defaultMessage = `
   Type <span class='command'>help</span> to see the list of available commands.
   Type <span class='command'>sumfetch</span> to display summary.
-  Type <span class='command'>repo</span> or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for the Github repository.
+  Type <span class='command'>repo</span> or click <a class="link text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a> for the Github repository.
   `;
 
   const xlAscii = `
-  ___   ____                        
+   ___   ____                        
   /' --;^/ ,-_\\      \\ | /        
  / / --o\\ o-\\ \\\\    --(_)--       
 /-/-/|o|-|\\-\\\\|\\\\    / | \\        
@@ -22,7 +22,7 @@ export const banner = (arg?: string): string => {
   `;
 
   const mdAscii = `
-  ___   ____
+   ___   ____
   /' --;^/ ,-_\\      \\ | /
  / / --o\\ o-\\ \\\\    --(_)--                 
 /-/-/|o|-|\\-\\\\|\\\\    / | \\

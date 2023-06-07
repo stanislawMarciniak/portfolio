@@ -21,12 +21,13 @@ Type <span class='command'>sumfetch</span> to display summary.
 // About
 export const whoami = async (args: string[]): Promise<string> => {
   return `
-My name is <b>Stanisław</b>! I am a freshman at<i><a href="https://p.lodz.pl/"> University of Technology</a></i>. I love to learn new things and technologies thats why I am looking for first work experience as a <b>Fullstack Developer</b>. I would like to broaden my horizonts with practical knowledge. Currently, I am learning TypeScript and Docker. I am motivated and ready to work hard and develop my coding skills.  
+My name is <b>Stanisław</b>! I am a freshman at<a class="link" href="https://p.lodz.pl/"> University of Technology</a>. I love to learn new things and technologies thats why I am looking for first work experience as a <b>Fullstack Developer</b>. I would like to broaden my horizonts with practical knowledge. Currently, I am learning TypeScript and Docker. I am motivated and ready to work hard and develop my coding skills.  
 
 More about me:
-'sumfetch' - short summary.
-'resume' - my latest resume.
-'readme' - my github readme.`;
+  <span class='command'>contact</span> - my social media.
+  <span class='command'>resume</span> - my latest resume.
+  <span class='command'>projects</span> - lists my latest projects.
+`;
 };
 
 export const resume = async (args: string[]): Promise<string> => {
