@@ -39,7 +39,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
     init();
 
     const handleResize = () => {
-      setHistory(banner(getSize()));
+      setHistory(banner(getSize())); // Update the state with the modified history array
     };
 
     window.addEventListener("resize", handleResize);
