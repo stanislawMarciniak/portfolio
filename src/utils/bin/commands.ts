@@ -14,7 +14,6 @@ export const help = async (args: string[]): Promise<string> => {
 \n<span class='command'>${c}</span>
 [tab]: trigger completion.
 [ctrl+l]/<span class='command'>clear</span>: clear terminal.\n
-Type <span class='command'>sumfetch</span> to display summary.
 `;
 };
 

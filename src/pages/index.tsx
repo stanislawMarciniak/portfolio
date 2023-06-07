@@ -14,10 +14,11 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
   const containerRef = React.useRef(null);
   const {
     history,
+    setHistory,
     command,
     lastCommandIndex,
     setCommand,
-    setHistory,
+    pushHistory,
     clearHistory,
     setLastCommandIndex,
   } = useHistory([]);
@@ -33,13 +34,25 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
     }
   };
 
-  const init = React.useCallback(() => setHistory(banner(getSize())), []);
-
   React.useEffect(() => {
-    init();
+    if (history.length > 0) {
+      setHistory([
+        {
+          ...history[0],
+          output: banner(getSize()),
+        },
+        ...history.slice(1),
+      ]);
+    } else pushHistory(banner(getSize()));
 
     const handleResize = () => {
-      setHistory(banner(getSize())); // Update the state with the modified history array
+      setHistory([
+        {
+          ...history[0],
+          output: banner(getSize()),
+        },
+        ...history.slice(1),
+      ]);
     };
 
     window.addEventListener("resize", handleResize);
@@ -47,11 +60,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [init]);
-
-  React.useEffect(() => {
-    init();
-  }, [init]);
+  }, []);
 
   React.useEffect(() => {
     if (inputRef.current) {
@@ -77,7 +86,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
             history={history}
             lastCommandIndex={lastCommandIndex}
             setCommand={setCommand}
-            setHistory={setHistory}
+            setHistory={pushHistory}
             setLastCommandIndex={setLastCommandIndex}
             clearHistory={clearHistory}
           />
