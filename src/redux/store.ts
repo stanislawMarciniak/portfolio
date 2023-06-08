@@ -1,11 +1,11 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
-import foldedSlice from "./folder";
+import { foldedSlice } from "./folder";
 import { createWrapper } from "next-redux-wrapper";
 
 const makeStore = () =>
   configureStore({
     reducer: {
-      [foldedSlice.name]: foldedSlice,
+      folded: foldedSlice.reducer,
     },
     devTools: true,
   });

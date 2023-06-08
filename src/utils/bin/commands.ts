@@ -1,5 +1,3 @@
-// List of commands that do not require API calls
-
 import * as bin from "./index";
 import config from "../../../config.json";
 
@@ -57,9 +55,10 @@ export const projects = async (args: string[]): Promise<string> => {
 };
 
 //EXIT && OPEN
-export const exit = async (args: string[]): Promise<string> => {
+export const close = async (args: string[]): Promise<string> => {
   return "Closing termina...";
 };
+
 export const open = async (args: string[]): Promise<string> => {
   return "Opening termina...";
 };

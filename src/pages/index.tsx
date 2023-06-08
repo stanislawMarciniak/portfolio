@@ -5,12 +5,15 @@ import { Input } from "../components/input";
 import { useHistory } from "../components/history/hook";
 import { History } from "../components/history/History";
 import { banner } from "../utils/banner";
+import { useSelector } from "react-redux";
+import { selectFoldedState } from "../redux/folder";
 
 interface IndexPageProps {
   inputRef: React.MutableRefObject<HTMLInputElement>;
 }
 
 const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
+  const folded = useSelector(selectFoldedState);
   const containerRef = React.useRef(null);
   const {
     history,
@@ -36,7 +39,6 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
 
   const init = () => {
     if (history.length > 0) {
-      console.log(history.length);
       setHistory([
         {
           ...history[0],
@@ -82,9 +84,13 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
         <title>{config.title}</title>
       </Head>
 
-      <div className="h-full p-8 overflow-hidden border-2 rounded-xl border-dark-yellow">
+      <div
+        className={`h-full overflow-hidden border-2 rounded-xl border-dark-yellow ${
+          folded ? "px-2" : "p-8"
+        }`}
+      >
         <div ref={containerRef} className="h-full overflow-y-auto">
-          <History history={history} />
+          {folded ? null : <History history={history} />}
 
           <Input
             inputRef={inputRef}

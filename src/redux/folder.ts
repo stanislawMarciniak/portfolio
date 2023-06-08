@@ -23,5 +23,5 @@ export const foldedSlice = createSlice({
 });
 
 export const { setFoldedState } = foldedSlice.actions;
-export const selecFoldedState = (state: AppState) => state.folded.foldedState;
+export const selectFoldedState = (state: AppState) => state.folded.foldedState;
 export default foldedSlice.reducer;
