@@ -3,17 +3,19 @@ import "../styles/global.css";
 import Head from "next/head";
 import { wrapper } from "../redux/store";
 import { useDispatch, useSelector } from "react-redux";
+import { selectFoldedState, setFoldedState } from "../redux/folder";
 
 const App = ({ Component, pageProps }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
-  const [folded, setFolded] = React.useState(false);
+  const folded = useSelector(selectFoldedState);
+  const dispatch = useDispatch();
 
   const onClickAnywhere = () => {
     inputRef.current.focus();
   };
 
   const toggleFold = () => {
-    setFolded(!folded);
+    dispatch(setFoldedState());
   };
 
   return (
@@ -26,17 +28,27 @@ const App = ({ Component, pageProps }) => {
         />
       </Head>
 
+      <style>
+        {`
+          ::-webkit-scrollbar {
+            width: ${folded ? "0px" : "10px"};
+            height: ${folded ? "0px" : "10px"};
+          }
+        `}
+      </style>
+
       <div
-        className="flex items-center justify-center text-xs text-dark-foreground min-w-max md:min-w-full md:text-base"
+        className={`flex justify-center text-xs text-dark-foreground min-w-max md:min-w-full md:text-base ${
+          folded ? null : "items-center"
+        }`}
         onClick={onClickAnywhere}
       >
         <main
-          className={` px-2 py-1 shadow-2xl ${
-            folded ? "h-28 w-500px" : "h-5/6 w-2/3"
-          } bg-dark-background rounded-2xl`}
+          className={` px-1 py-1 shadow-2xl bg-dark-background rounded-2xl ${
+            folded ? "h-9 w-custom mt-4" : "h-5/6 w-2/3"
+          }`}
         >
           <Component {...pageProps} inputRef={inputRef} />
-          <button onClick={toggleFold}>fold</button>
         </main>
       </div>
     </>
