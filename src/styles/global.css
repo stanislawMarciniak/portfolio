@@ -45,9 +45,7 @@
   color: #519975;
   content: "visitor@fkcodes.com:~$";
 }
-#liner.password::before {
-  content: "Password:";
-}
+
 @keyframes show {
   from {
     opacity: 0;
@@ -88,7 +86,8 @@ div#__next > div {
 
 ::-webkit-scrollbar {
   width: 10px;
-  height: 10px;
+  height: 10px; 
+  /* change to 0px if folded */
 }
 
 ::-webkit-scrollbar-track {

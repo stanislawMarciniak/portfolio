@@ -20,7 +20,7 @@ export const help = async (args: string[]): Promise<string> => {
 // About
 export const whoami = async (args: string[]): Promise<string> => {
   return `
-My name is <b>Stanisław</b>! I am a freshman at<a class="link" href="https://p.lodz.pl/"> University of Technology</a>. I love to learn new things and technologies thats why I am looking for first work experience as a <b>Fullstack Developer</b>. I would like to broaden my horizonts with practical knowledge. Currently, I am learning TypeScript and Docker. I am motivated and ready to work hard and develop my coding skills.  
+My name is <b>Stanisław</b>! I am a freshman at<a class="link" target="_blank" href="https://p.lodz.pl/"> University of Technology</a>. I love to learn new things and technologies thats why I am looking for first work experience as a <b>Fullstack Developer</b>. I would like to broaden my horizonts with practical knowledge. Currently, I am learning TypeScript and Docker. I am motivated and ready to work hard and develop my coding skills.  
 
 More about me:
 <span class='command'>contact</span> - my social media.

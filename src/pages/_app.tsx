@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/global.css";
 import Head from "next/head";
+import { Provider } from "react-redux";
+import store from "../redux/store";
 
 const App = ({ Component, pageProps }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
-  const [folded, setFolded] = useState(false);
+  const [folded, setFolded] = React.useState(false);
 
   const onClickAnywhere = () => {
     inputRef.current.focus();
@@ -15,7 +17,7 @@ const App = ({ Component, pageProps }) => {
   };
 
   return (
-    <>
+    <Provider store={store}>
       <Head>
         <meta
           name="viewport"
@@ -26,19 +28,19 @@ const App = ({ Component, pageProps }) => {
       </Head>
 
       <div
-        className="flex justify-center text-xs text-light-foreground dark:text-dark-foreground min-w-max md:min-w-full md:text-base"
+        className="flex items-center justify-center text-xs text-dark-foreground min-w-max md:min-w-full md:text-base"
         onClick={onClickAnywhere}
       >
         <main
-          className={`w-2/3 p-2 shadow-2xl ${
-            folded ? "h-28" : "h-5/6"
-          } bg-light-background dark:bg-dark-background rounded-2xl`}
+          className={` px-2 py-1 shadow-2xl ${
+            folded ? "h-28 w-500px" : "h-5/6 w-2/3"
+          } bg-dark-background rounded-2xl`}
         >
           <Component {...pageProps} inputRef={inputRef} />
           <button onClick={toggleFold}>fold</button>
         </main>
       </div>
-    </>
+    </Provider>
   );
 };
 
