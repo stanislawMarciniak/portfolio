@@ -8,8 +8,11 @@ export const foldedSlice = createSlice({
     foldedState: false,
   },
   reducers: {
-    setFoldedState: (state) => {
-      state.foldedState = !state.foldedState;
+    fold: (state) => {
+      state.foldedState = true;
+    },
+    unfold: (state) => {
+      state.foldedState = false;
     },
   },
   extraReducers: {
@@ -22,6 +25,6 @@ export const foldedSlice = createSlice({
   },
 });
 
-export const { setFoldedState } = foldedSlice.actions;
+export const { fold, unfold } = foldedSlice.actions;
 export const selectFoldedState = (state: AppState) => state.folded.foldedState;
 export default foldedSlice.reducer;

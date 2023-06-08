@@ -3,7 +3,7 @@ import "../styles/global.css";
 import Head from "next/head";
 import { wrapper } from "../redux/store";
 import { useDispatch, useSelector } from "react-redux";
-import { selectFoldedState, setFoldedState } from "../redux/folder";
+import { selectFoldedState } from "../redux/folder";
 
 const App = ({ Component, pageProps }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
@@ -12,10 +12,6 @@ const App = ({ Component, pageProps }) => {
 
   const onClickAnywhere = () => {
     inputRef.current.focus();
-  };
-
-  const toggleFold = () => {
-    dispatch(setFoldedState());
   };
 
   return (

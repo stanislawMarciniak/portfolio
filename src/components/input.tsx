@@ -4,7 +4,7 @@ import { shell } from "../utils/shell";
 import { handleTabCompletion } from "../utils/tabCompletion";
 import { Ps1 } from "./Ps1";
 import { useDispatch } from "react-redux";
-import { setFoldedState } from "../redux/folder";
+import { fold, unfold } from "../redux/folder";
 
 export const Input = ({
   inputRef,
@@ -24,8 +24,8 @@ export const Input = ({
       .map(({ command }) => command)
       .filter((command: string) => command);
 
-    if (command === "exit" || command === "open") {
-      dispatch(setFoldedState());
+    if (command === "close" || command === "open") {
+      command === "close" ? dispatch(fold()) : dispatch(unfold());
     }
 
     if (event.key === "c" && event.ctrlKey) {
