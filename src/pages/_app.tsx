@@ -1,8 +1,8 @@
 import React from "react";
 import "../styles/global.css";
 import Head from "next/head";
-import { Provider } from "react-redux";
-import store from "../redux/store";
+import { wrapper } from "../redux/store";
+import { useDispatch, useSelector } from "react-redux";
 
 const App = ({ Component, pageProps }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
@@ -17,7 +17,7 @@ const App = ({ Component, pageProps }) => {
   };
 
   return (
-    <Provider store={store}>
+    <>
       <Head>
         <meta
           name="viewport"
@@ -39,8 +39,8 @@ const App = ({ Component, pageProps }) => {
           <button onClick={toggleFold}>fold</button>
         </main>
       </div>
-    </Provider>
+    </>
   );
 };
 
-export default App;
+export default wrapper.withRedux(App);
