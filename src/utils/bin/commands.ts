@@ -56,9 +56,9 @@ export const projects = async (args: string[]): Promise<string> => {
 
 //EXIT && OPEN
 export const close = async (args: string[]): Promise<string> => {
-  return "Closing termina...";
+  return "";
 };
 
 export const open = async (args: string[]): Promise<string> => {
-  return "Opening termina...";
+  return "";
 };

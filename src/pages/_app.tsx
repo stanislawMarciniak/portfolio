@@ -2,13 +2,12 @@ import React from "react";
 import "../styles/global.css";
 import Head from "next/head";
 import { wrapper } from "../redux/store";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { selectFoldedState } from "../redux/folder";
 
 const App = ({ Component, pageProps }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
   const folded = useSelector(selectFoldedState);
-  const dispatch = useDispatch();
 
   const onClickAnywhere = () => {
     inputRef.current.focus();

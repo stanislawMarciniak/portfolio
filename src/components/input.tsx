@@ -24,10 +24,6 @@ export const Input = ({
       .map(({ command }) => command)
       .filter((command: string) => command);
 
-    if (command === "close" || command === "open") {
-      command === "close" ? dispatch(fold()) : dispatch(unfold());
-    }
-
     if (event.key === "c" && event.ctrlKey) {
       event.preventDefault();
       setCommand("");
@@ -46,6 +42,9 @@ export const Input = ({
     }
 
     if (event.key === "Enter" || event.code === "13") {
+      if (command === "close" || command === "open") {
+        command === "close" ? dispatch(fold()) : dispatch(unfold());
+      }
       event.preventDefault();
       setLastCommandIndex(0);
       await shell(command, setHistory, clearHistory, setCommand);
