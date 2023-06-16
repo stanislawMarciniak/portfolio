@@ -25,21 +25,20 @@ export const projectsData: IProject[] = [
     ],
   },
   {
+    name: "Swiftboard",
+    image_path: "/images/swiftboard.png",
+    deployed_url: "https://swiftboard.netlify.app/",
+    github_url: "https://github.com/swift-soft/swift-board",
+    description: "It is an onboarding platform that utilizes AI to make the onboarding process as straight-forward as possible for the employers as well as the onboarded employees. It is a group project and I was responsible for employer dashboard. The project won the hackathon <i>Hack na Zdrowie 2</i>.",
+    key_techs: ["Vite", "Supabase", "Chakra UI", "Typescript", "Docker"],
+  },
+  {
     name: "Weather app",
-    image_path: "/images/weather1.png",
+    image_path: "/images/weather.png",
     deployed_url: "https://weather-forecast-app-sm.netlify.app",
     github_url: "https://github.com/stanislawMarciniak/weather-app",
     description:
       "An extensive weather application that provides daily and hourly forecasts for a searched city or the user's current location.",
     key_techs: ["React", "Tailwind", "API"],
-  },
-
-  {
-    name: "Portfolio",
-    image_path: "/images/portfolio3.png",
-    deployed_url: "https://portfolio-s-m.netlify.app",
-    github_url: "https://github.com/stanislawMarciniak/portfolio",
-    description: "A webpage that serves as a hub for all my other projects.",
-    key_techs: ["Next.js", "Tailwind", "Typescript"],
   },
 ];

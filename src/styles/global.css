@@ -89,6 +89,13 @@ div#__next > div {
   text-shadow: 0 0 3px #49c427; 
 }
 
+.project {
+  background-color: #454e5f;
+  border-radius: 8px;
+  padding: 8px;
+  margin-right: 10px;
+}
+
 ::-webkit-scrollbar-track {
   background: #1e252e;
   border-radius: 5px;
