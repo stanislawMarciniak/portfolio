@@ -4,6 +4,7 @@ import Head from "next/head";
 import { wrapper } from "../redux/store";
 import { useSelector } from "react-redux";
 import { selectFoldedState } from "../redux/folder";
+import { Portfolio } from "../components/visual-portfolio/Portfolio"
 
 const App = ({ Component, pageProps }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
@@ -44,6 +45,7 @@ const App = ({ Component, pageProps }) => {
           }`}
         >
           <Component {...pageProps} inputRef={inputRef} />
+          {folded ? <Portfolio /> : null}
         </main>
       </div>
     </>
