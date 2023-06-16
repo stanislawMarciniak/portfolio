@@ -1,5 +1,6 @@
 import * as bin from "./index";
 import config from "../../../config.json";
+import { projectsData } from "../../../projects";
 
 // Help
 export const help = async (args: string[]): Promise<string> => {
@@ -51,14 +52,17 @@ export const repo = async (args: string[]): Promise<string> => {
 
 //Projects
 export const projects = async (args: string[]): Promise<string> => {
-  return "Projects...";
+  const projectsList = projectsData.map(project => 
+    `${project.name} - ${project.description} \n`
+  );
+  return projectsList.join("\n");
 };
 
 //EXIT && OPEN
 export const close = async (args: string[]): Promise<string> => {
-  return "";
+  return "Closing terminal...";
 };
 
 export const open = async (args: string[]): Promise<string> => {
-  return "";
+  return "Opening terminal...";
 };

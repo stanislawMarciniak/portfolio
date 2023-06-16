@@ -84,6 +84,11 @@ div#__next > div {
   text-shadow: 0 0 3px #80ad73; 
 }
 
+.link:hover {
+  color: #49c427;
+  text-shadow: 0 0 3px #49c427; 
+}
+
 ::-webkit-scrollbar-track {
   background: #1e252e;
   border-radius: 5px;
