@@ -4,6 +4,7 @@ import headerImg from "/public/assets/img/header-img.svg";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import Image from "next/image";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -74,16 +75,8 @@ export const Banner = () => {
                     </span>
                   </h1>
                   <p>
-                    My name is <b>Stanisław</b>! I am a freshman at
-                    <a
-                      rel="noreferrer"
-                      target="_blank"
-                      href="https://p.lodz.pl/"
-                    >
-                      {" "}
-                      University of Technology
-                    </a>
-                    . I love to learn new things and technologies thats why I am
+                    My name is <b>Stanisław</b>! I am a freshman at                
+                    University of Technology. I love to learn new things and technologies thats why I am
                     looking for first work experience as a{" "}
                     <b>Fullstack Developer</b>. I would like to broaden my
                     horizonts with practical knowledge. Currently, I am learning
@@ -105,7 +98,7 @@ export const Banner = () => {
                     isVisible ? "animate__animated animate__zoomIn" : ""
                   }
                 >
-                  <img src={headerImg} alt="Header Img" />
+                  <Image src={headerImg} alt="Header Img" />
                 </div>
               )}
             </TrackVisibility>

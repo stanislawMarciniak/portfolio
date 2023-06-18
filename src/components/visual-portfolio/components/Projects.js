@@ -6,6 +6,7 @@ import projImg3 from "/public/assets/img/project-img3.png";
 import colorSharp2 from "/public/assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import Image from "next/image";
 
 export const Projects = () => {
 
@@ -92,7 +93,7 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2}></img>
+      <Image className="background-image-right" src={colorSharp2} alt=""/>
     </section>
   )
 }
