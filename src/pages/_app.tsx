@@ -46,8 +46,8 @@ const App = ({ Component, pageProps }) => {
         >
           <Component {...pageProps} inputRef={inputRef} />
         </main>
-          {folded ? <Portfolio /> : null}
       </div>
+          {folded ? <Portfolio /> : null}
     </>
   );
 };
