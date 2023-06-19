@@ -53,7 +53,7 @@ export const repo = async (args: string[]): Promise<string> => {
 //Projects
 export const projects = async (args: string[]): Promise<string> => {
   const projectsList = projectsData.map(project => 
-    `<div class="project"><b>${project.name}</b> - ${project.description} \n\nTech stack: ${project.key_techs.join(", ")} \n\n<a target="_blank" href=${project.deployed_url} class="link">Web Page</a> - <a target="_blank" href=${project.github_url} class="link">Github Repo</a>\n</div>`
+    `<div class="project-terminal"><b>${project.name}</b> - ${project.description} \n\nTech stack: ${project.key_techs.join(", ")} \n\n<a target="_blank" href=${project.deployed_url} class="link">Web Page</a> - <a target="_blank" href=${project.github_url} class="link">Github Repo</a>\n</div>`
   );
   return `Here is some of my latest projects:\n
 ${projectsList.join("\n")}

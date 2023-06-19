@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from '/public/assets/img/logo.svg';
 import navIcon1 from '/public/assets/img/nav-icon1.svg';
 import navIcon2 from '/public/assets/img/nav-icon2.svg';
 import navIcon3 from '/public/assets/img/nav-icon3.svg';
@@ -9,11 +8,23 @@ import {
   BrowserRouter as Router
 } from "react-router-dom";
 import Image from "next/image";
+import Input from "../../input";
+import { useHistory } from "../../history/hook";
 
 export const NavBar = () => {
 
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
+  const {
+    history,
+    setHistory,
+    command,
+    lastCommandIndex,
+    setCommand,
+    pushHistory,
+    clearHistory,
+    setLastCommandIndex,
+  } = useHistory([]);
 
   useEffect(() => {
     const onScroll = () => {
@@ -37,12 +48,21 @@ export const NavBar = () => {
     <Router>
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
-          <Navbar.Brand href="/">
-            <Image src={logo} alt="Logo" />
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav">
-            <span className="navbar-toggler-icon"></span>
-          </Navbar.Toggle>
+          <div
+            className='h-full px-2 overflow-hidden border-2 rounded-xl border-dark-yellow bg-dark-background'
+          >
+            <div className="h-full overflow-y-auto ">
+              <Input
+                command={command}
+                history={history}
+                lastCommandIndex={lastCommandIndex}
+                setCommand={setCommand}
+                setHistory={pushHistory}
+                setLastCommandIndex={setLastCommandIndex}
+                clearHistory={clearHistory}
+              />
+            </div>
+          </div>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>

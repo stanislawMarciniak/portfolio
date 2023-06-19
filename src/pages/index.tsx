@@ -83,14 +83,14 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
       <Head>
         <title>{config.title}</title>
       </Head>
-
+      {folded ? null :
       <div
         className={`h-full overflow-hidden border-2 rounded-xl border-dark-yellow ${
           folded ? "px-2" : "p-8"
         }`}
       >
         <div ref={containerRef} className="h-full overflow-y-auto">
-          {folded ? null : <History history={history} />}
+          <History history={history} />
 
           <Input
             inputRef={inputRef}
@@ -105,6 +105,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
           />
         </div>
       </div>
+      }
     </>
   );
 };

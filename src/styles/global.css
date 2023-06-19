@@ -55,11 +55,6 @@
   font-family: 'Hack', monospace;
 }
 
-body {
-  background: url('../../public/bg.svg') no-repeat;
-  background-size: cover;
-}
-
 html,
 body,
 body > div:first-child,
@@ -84,7 +79,7 @@ div#__next > div {
   text-shadow: 0 0 3px #49c427; 
 }
 
-.project {
+.project-terminal {
   background-color: #373e4d;
   border-radius: 8px;
   padding: 8px;
@@ -342,10 +337,6 @@ div#__next > div {
   .banner {
     margin-top: 0;
     padding: 260px 0 100px 0;
-    background-image: url('/assets/img/banner-bg.png');
-    background-position: top center;
-    background-size: cover;
-    background-repeat: no-repeat;
   }
   .banner .tagline {
     font-weight: 700;
@@ -452,7 +443,6 @@ div#__next > div {
   .project {
     padding: 80px 0;
     position: relative;
-    background-color: black;
   }
   .project h2 {
     font-size: 45px;
@@ -537,14 +527,7 @@ div#__next > div {
     font-size: 15px;
     letter-spacing: 0.8px;
   }
-  .background-image-right {
-    top: 20%;
-    position: absolute;
-    bottom: 0;
-    width: 35%;
-    right: 0;
-    z-index: -4;
-  }
+
 
   /************ Contact Css ************/
   .contact {

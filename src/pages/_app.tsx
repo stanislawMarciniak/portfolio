@@ -23,31 +23,34 @@ const App = ({ Component, pageProps }) => {
           key="viewport"
         />
       </Head>
-
       <style>
         {`
           ::-webkit-scrollbar {
             width: ${folded ? "0px" : "10px"};
             height: ${folded ? "0px" : "10px"};
           }
+          body {
+            background: url(${folded ? "/assets/img/banner-bg.png" : "/public/bg.svg"}) no-repeat;
+            background-size: cover;
+          }
         `}
       </style>
-
-      <div
-        className={`flex justify-center text-xs text-dark-foreground min-w-max md:min-w-full md:text-base ${
-          folded ? null : "items-center"
-        }`}
-        onClick={onClickAnywhere}
-      >
-        <main
-          className={` px-1 py-1 shadow-2xl bg-dark-background rounded-2xl ${
-            folded ? "h-9 w-custom mt-4" : "h-5/6 w-2/3"
-          }`}
+      {folded ? 
+        <div className="text-dark-foreground">
+          <Portfolio />
+        </div> :
+      
+        <div
+          className='flex items-center justify-center text-xs text-dark-foreground min-w-max md:min-w-full md:text-base'
+          onClick={onClickAnywhere}
         >
-          <Component {...pageProps} inputRef={inputRef} />
-        </main>
-      </div>
-          {folded ? <Portfolio /> : null}
+          <main
+            className='w-2/3 px-1 py-1 shadow-2xl bg-dark-background rounded-2xl h-5/6'
+          >
+            <Component {...pageProps} inputRef={inputRef} />
+          </main>
+        </div>
+           }
     </>
   );
 };

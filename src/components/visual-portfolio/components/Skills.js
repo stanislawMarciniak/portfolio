@@ -59,7 +59,6 @@ export const Skills = () => {
                 </div>
             </div>
         </div>
-        <Image className="background-image-left" src={colorSharp} alt="Image" />
     </section>
   )
 }
