@@ -29,10 +29,7 @@ const App = ({ Component, pageProps }) => {
             width: ${folded ? "0px" : "10px"};
             height: ${folded ? "0px" : "10px"};
           }
-          body {
-            background: url(${folded ? "/assets/img/banner-bg.png" : "/public/bg.svg"}) no-repeat;
-            background-size: cover;
-          }
+
         `}
       </style>
       {folded ? 
