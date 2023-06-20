@@ -1,16 +1,25 @@
 import Image from "next/image";
-import { Col } from "react-bootstrap";
 
-export const ProjectCard = ({ title, description, imgUrl }) => {
+export const ProjectCard = ({ project, index }) => {
   return (
-    <Col size={12} sm={6} md={4}>
-      <div className="proj-imgbx">
-        <Image src={imgUrl} alt=""/>
-        <div className="proj-txtx">
-          <h4>{title}</h4>
-          <span>{description}</span>
+    <div>
+      {index % 2 === 1 ? (
+        <div className="flex justify-around my-20">
+          <Image width="300px" height="200px" src={project.image_path} alt="" />
+          <div>
+            <h4>{project.name}</h4>
+            <span>{project.description}</span>
+          </div>
         </div>
-      </div>
-    </Col>
-  )
-}
+      ) : (
+        <div className="flex justify-around my-20">
+          <div>
+            <h4>{project.name}</h4>
+            <span>{project.description}</span>
+          </div>
+          <Image width="500px" height="200px" src={project.image_path} alt="" />
+        </div>
+      )}
+    </div>
+  );
+};
