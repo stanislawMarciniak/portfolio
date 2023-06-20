@@ -7,6 +7,7 @@ import { selectFoldedState } from "../redux/folder";
 import { Portfolio } from "../components/visual-portfolio/Portfolio";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { fold } from "../redux/folder";
+import Loading from "../components/Loading";
 
 const App = ({ Component, pageProps }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
@@ -40,7 +41,7 @@ const App = ({ Component, pageProps }) => {
   });
 
   if (isLoading) {
-    return <div></div>;
+    return <Loading />;
   }
 
   return (
