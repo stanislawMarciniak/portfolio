@@ -1,4 +1,5 @@
 const { colors } = require("./config.json");
+const defaultColors = require("tailwindcss/colors");
 
 module.exports = {
   content: [
@@ -8,9 +9,11 @@ module.exports = {
   darkMode: "media", // or 'media' or 'class'
   theme: {
     colors: {
+      darkCustom: "#151515",
       transparent: "transparent",
       current: "currentColor",
       ...colors,
+      ...defaultColors,
     },
     extend: {
       width: {

@@ -11,7 +11,9 @@ export const Projects = () => {
         <Row>
           <Col size={12}>
             <TrackVisibility>
-              <h2 className="flex justify-center mb-14">Projects</h2>
+              <h2 className="flex justify-center text-5xl font-bold mb-14">
+                Projects
+              </h2>
 
               {projectsData.map((project, index) => {
                 return (

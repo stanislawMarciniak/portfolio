@@ -47,6 +47,6 @@ export const projectsData: IProject[] = [
     github_url: "https://github.com/stanislawMarciniak/weather-app",
     description:
       "An extensive weather application that provides daily and hourly forecasts for a searched city or the user's current location.",
-    key_techs: ["React", "Tailwind", "API"],
+    key_techs: ["React", "Tailwind", "OpenWeather API"],
   },
 ];
