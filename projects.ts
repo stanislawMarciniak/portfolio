@@ -31,14 +31,7 @@ export const projectsData: IProject[] = [
     github_url: "https://github.com/stanislawMarciniak/tictactoe_online",
     description:
       "This app is a WebSocket application that enables two players on different devices to play the game in real-time and chat with each other. The game also features a login and registration page and uses cookies for user authentication.",
-    key_techs: [
-      "React",
-      "Getstream.io",
-      "Axios",
-      "Express",
-      "Universal Cookies",
-      "Bcrypt",
-    ],
+    key_techs: ["React", "Getstream.io", "Axios", "Express", "Cookies"],
   },
   {
     name: "Weather app",

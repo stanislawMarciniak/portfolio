@@ -1,15 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/global.css";
 import Head from "next/head";
 import { wrapper } from "../redux/store";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { selectFoldedState } from "../redux/folder";
 import { Portfolio } from "../components/visual-portfolio/Portfolio";
 import { createTheme, ThemeProvider } from "@mui/material";
+import { fold } from "../redux/folder";
 
 const App = ({ Component, pageProps }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
   const folded = useSelector(selectFoldedState);
+  const dispatch = useDispatch();
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      await dispatch(fold());
+      setIsLoading(false);
+    };
+
+    fetchData();
+  }, []);
 
   const onClickAnywhere = () => {
     inputRef.current.focus();
@@ -26,6 +38,10 @@ const App = ({ Component, pageProps }) => {
       },
     },
   });
+
+  if (isLoading) {
+    return <div></div>;
+  }
 
   return (
     <>

@@ -3,8 +3,9 @@ import { commandExists } from "../utils/commandExists";
 import { shell } from "../utils/shell";
 import { handleTabCompletion } from "../utils/tabCompletion";
 import { Ps1 } from "./Ps1";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { fold, unfold } from "../redux/folder";
+import { selectFoldedState } from "../redux/folder";
 
 export const Input = ({
   inputRef,
@@ -18,6 +19,7 @@ export const Input = ({
   clearHistory,
 }) => {
   const dispatch = useDispatch();
+  const folded = useSelector(selectFoldedState);
 
   const onSubmit = async (event: React.KeyboardEvent<HTMLInputElement>) => {
     const commands: [string] = history
@@ -92,6 +94,7 @@ export const Input = ({
       </label>
 
       <input
+        placeholder={folded ? "type open ;)" : ""}
         ref={inputRef}
         id="prompt"
         type="text"

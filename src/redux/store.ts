@@ -1,16 +1,19 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 import { foldedSlice } from "./folder";
-import { createWrapper } from "next-redux-wrapper";
+import { createWrapper, Context } from "next-redux-wrapper";
+import { combineReducers, Store } from "redux";
 
-const makeStore = () =>
+const rootReducer = combineReducers({
+  folded: foldedSlice.reducer,
+});
+
+const makeStore = (context: Context) =>
   configureStore({
-    reducer: {
-      folded: foldedSlice.reducer,
-    },
+    reducer: rootReducer,
     devTools: true,
   });
 
-export type AppStore = ReturnType<typeof makeStore>;
+export type AppStore = Store;
 export type AppState = ReturnType<AppStore["getState"]>;
 export type AppThunk<ReturnType = void> = ThunkAction<
   ReturnType,
