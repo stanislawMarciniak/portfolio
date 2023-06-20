@@ -69,15 +69,15 @@ export const Banner = () => {
                     <span
                       className="txt-rotate"
                       dataperiod="1000"
-                      data-rotate='[ "Aspiring Fullstack Developer", "Fullstack Developer" ]'
+                      data-rotate='[ "Web Developer", "Fullstack Developer" ]'
                     >
                       <span className="wrap">{text}</span>
                     </span>
                   </h1>
                   <p>
-                    My name is <b>Stanisław</b>! I am a freshman at                
-                    University of Technology. I love to learn new things and technologies thats why I am
-                    looking for first work experience as a{" "}
+                    My name is <b>Stanisław</b>! I am a freshman at University
+                    of Technology. I love to learn new things and technologies
+                    thats why I am looking for first work experience as a{" "}
                     <b>Fullstack Developer</b>. I would like to broaden my
                     horizonts with practical knowledge. Currently, I am learning
                     TypeScript and Docker. I am motivated and ready to work hard

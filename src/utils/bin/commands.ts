@@ -12,7 +12,7 @@ export const help = async (args: string[]): Promise<string> => {
   return `Welcome! Here are all the available commands:
 \n<span class='command'>${c}</span>
 [tab]: trigger completion.
-[ctrl+l]/<span class='command'>clear</span>: clear terminal.\n
+[ctrl+l]/<span class='command'>clear</span>: clear terminal.
 `;
 };
 
@@ -52,8 +52,17 @@ export const repo = async (args: string[]): Promise<string> => {
 
 //Projects
 export const projects = async (args: string[]): Promise<string> => {
-  const projectsList = projectsData.map(project => 
-    `<div class="project-terminal"><b>${project.name}</b> - ${project.description} \n\nTech stack: ${project.key_techs.join(", ")} \n\n<a target="_blank" href=${project.deployed_url} class="link">Web Page</a> - <a target="_blank" href=${project.github_url} class="link">Github Repo</a>\n</div>`
+  const projectsList = projectsData.map(
+    (project) =>
+      `<div class="project-terminal"><b>${project.name}</b> - ${
+        project.description
+      } \n\nTech stack: ${project.key_techs.join(
+        ", "
+      )} \n\n<a target="_blank" href=${
+        project.deployed_url
+      } class="link">Web Page</a> - <a target="_blank" href=${
+        project.github_url
+      } class="link">Github Repo</a>\n</div>`
   );
   return `Here is some of my latest projects:\n
 ${projectsList.join("\n")}
