@@ -83,29 +83,29 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
       <Head>
         <title>{config.title}</title>
       </Head>
-      {folded ? null :
-      <div
-        className={`h-full overflow-hidden border-2 rounded-xl border-dark-yellow ${
-          folded ? "px-2" : "p-8"
-        }`}
-      >
-        <div ref={containerRef} className="h-full overflow-y-auto">
-          <History history={history} />
+      {folded ? null : (
+        <div
+          className={`h-full overflow-hidden border-2 rounded-xl border-dark-yellow ${
+            folded ? "px-2" : "p-8"
+          }`}
+        >
+          <div ref={containerRef} className="h-full overflow-y-auto">
+            <History history={history} />
 
-          <Input
-            inputRef={inputRef}
-            containerRef={containerRef}
-            command={command}
-            history={history}
-            lastCommandIndex={lastCommandIndex}
-            setCommand={setCommand}
-            setHistory={pushHistory}
-            setLastCommandIndex={setLastCommandIndex}
-            clearHistory={clearHistory}
-          />
+            <Input
+              inputRef={inputRef}
+              containerRef={containerRef}
+              command={command}
+              history={history}
+              lastCommandIndex={lastCommandIndex}
+              setCommand={setCommand}
+              setHistory={pushHistory}
+              setLastCommandIndex={setLastCommandIndex}
+              clearHistory={clearHistory}
+            />
+          </div>
         </div>
-      </div>
-      }
+      )}
     </>
   );
 };

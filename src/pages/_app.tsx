@@ -8,6 +8,8 @@ import { Portfolio } from "../components/visual-portfolio/Portfolio";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { fold } from "../redux/folder";
 import Loading from "../components/Loading";
+import { ChakraProvider } from "@chakra-ui/react";
+import themeConfig from "../config/theme";
 
 const App = ({ Component, pageProps }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
@@ -62,22 +64,24 @@ const App = ({ Component, pageProps }) => {
 
         `}
       </style>
-      <ThemeProvider theme={theme}>
-        {folded ? (
-          <div className="text-dark-foreground">
-            <Portfolio />
-          </div>
-        ) : (
-          <div
-            className="flex items-center justify-center text-xs text-dark-foreground min-w-max md:min-w-full md:text-base"
-            onClick={onClickAnywhere}
-          >
-            <main className="w-2/3 px-1 py-1 shadow-2xl bg-dark-background rounded-2xl h-5/6">
-              <Component {...pageProps} inputRef={inputRef} />
-            </main>
-          </div>
-        )}
-      </ThemeProvider>
+      <ChakraProvider theme={themeConfig}>
+        <ThemeProvider theme={theme}>
+          {folded ? (
+            <div className="text-dark-foreground portfolio">
+              <Portfolio />
+            </div>
+          ) : (
+            <div
+              className="flex items-center justify-center text-xs text-dark-foreground min-w-max md:min-w-full md:text-base"
+              onClick={onClickAnywhere}
+            >
+              <main className="w-2/3 px-1 py-1 shadow-2xl bg-dark-background rounded-2xl h-5/6">
+                <Component {...pageProps} inputRef={inputRef} />
+              </main>
+            </div>
+          )}
+        </ThemeProvider>
+      </ChakraProvider>
     </>
   );
 };

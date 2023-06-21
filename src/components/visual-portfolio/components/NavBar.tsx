@@ -14,7 +14,6 @@ export const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
   const {
     history,
-    setHistory,
     command,
     lastCommandIndex,
     setCommand,
