@@ -1,12 +1,6 @@
-import meter1 from "/public/assets/img/meter1.svg";
-import meter2 from "/public/assets/img/meter2.svg";
-import meter3 from "/public/assets/img/meter3.svg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import arrow1 from "/public/assets/img/arrow1.svg";
-import arrow2 from "/public/assets/img/arrow2.svg";
-import colorSharp from "/public/assets/img/color-sharp.png";
-import Image from "next/image";
+import { skillsData } from "../../../../data";
 
 export const Skills = () => {
   const responsive = {
@@ -14,8 +8,12 @@ export const Skills = () => {
       breakpoint: { max: 4000, min: 3000 },
       items: 5,
     },
+    largeDesktop: {
+      breakpoint: { max: 3000, min: 1600 },
+      items: 4,
+    },
     desktop: {
-      breakpoint: { max: 3000, min: 1024 },
+      breakpoint: { max: 1600, min: 1024 },
       items: 3,
     },
     tablet: {
@@ -45,22 +43,12 @@ export const Skills = () => {
                 infinite={true}
                 className="owl-carousel owl-theme skill-slider"
               >
-                <div className="item">
-                  <Image src={meter1} alt="Image" />
-                  <h5>Web Development</h5>
-                </div>
-                <div className="item">
-                  <Image src={meter2} alt="Image" />
-                  <h5>Brand Identity</h5>
-                </div>
-                <div className="item">
-                  <Image src={meter3} alt="Image" />
-                  <h5>Logo Design</h5>
-                </div>
-                <div className="item">
-                  <Image src={meter1} alt="Image" />
-                  <h5>Web Development</h5>
-                </div>
+                {skillsData.map((skill, id) => (
+                  <div className="flex flex-col items-center" key={id}>
+                    <skill.Icon className="mb-4 text-9xl" />
+                    <span className="text-2xl">{skill.name}</span>
+                  </div>
+                ))}
               </Carousel>
             </div>
           </div>

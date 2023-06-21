@@ -1,3 +1,21 @@
+import { IconType } from "react-icons";
+import {
+  SiGithub,
+  SiLinux,
+  SiPostman,
+  SiTailwindcss,
+  SiTypescript,
+  SiNodedotjs,
+  SiNextdotjs,
+  SiCplusplus,
+} from "react-icons/si";
+import { DiReact } from "react-icons/di";
+
+export interface ISkill {
+  name: string;
+  Icon: IconType;
+}
+
 interface IProject {
   name: string;
   description: string;
@@ -6,6 +24,45 @@ interface IProject {
   github_url: string;
   key_techs: string[];
 }
+
+export const skillsData: ISkill[] = [
+  {
+    Icon: SiTailwindcss,
+    name: "Tailwind",
+  },
+  {
+    Icon: SiTypescript,
+    name: "TypeScript",
+  },
+  {
+    Icon: DiReact,
+    name: "React",
+  },
+  {
+    Icon: SiNodedotjs,
+    name: "Node.js",
+  },
+  {
+    Icon: SiNextdotjs,
+    name: "Next.js",
+  },
+  {
+    Icon: SiGithub,
+    name: "GitHub",
+  },
+  {
+    Icon: SiLinux,
+    name: "Linux",
+  },
+  {
+    Icon: SiPostman,
+    name: "Postman",
+  },
+  {
+    Icon: SiCplusplus,
+    name: "C++",
+  },
+];
 
 export const projectsData: IProject[] = [
   {

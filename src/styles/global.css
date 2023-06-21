@@ -343,13 +343,10 @@ body {
     width: 50%;
     margin: 0 auto 15px auto;
   }
-  .background-image-left {
-    top: 28%;
-    position: absolute;
-    bottom: 0;
-    width: 40%;
-    z-index: -4;
+  .skill-icon {
+    color: linear-gradient(135deg, pink, blue);
   }
+
 
   /************ Projects Css ************/
   

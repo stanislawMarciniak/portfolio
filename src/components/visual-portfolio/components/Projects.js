@@ -2,7 +2,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
-import { projectsData } from "../../../../projects";
+import { projectsData } from "../../../../data";
 
 export const Projects = () => {
   return (

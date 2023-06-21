@@ -1,6 +1,6 @@
 import * as bin from "./index";
 import config from "../../../config.json";
-import { projectsData } from "../../../projects";
+import { projectsData } from "../../../data";
 
 // Help
 export const help = async (args: string[]): Promise<string> => {
