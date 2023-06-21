@@ -10,6 +10,7 @@ import {
   SiCplusplus,
   SiReact,
   SiSupabase,
+  SiChakraui,
 } from "react-icons/si";
 
 export interface ISkill {
@@ -27,10 +28,6 @@ interface IProject {
 }
 
 export const skillsData: ISkill[] = [
-  {
-    Icon: SiTailwindcss,
-    name: "Tailwind",
-  },
   {
     Icon: SiTypescript,
     name: "TypeScript",
@@ -50,6 +47,14 @@ export const skillsData: ISkill[] = [
   {
     Icon: SiSupabase,
     name: "Supabase",
+  },
+  {
+    Icon: SiTailwindcss,
+    name: "Tailwind",
+  },
+  {
+    Icon: SiChakraui,
+    name: "Chakra UI",
   },
   {
     Icon: SiGithub,
