@@ -8,8 +8,8 @@ import {
   SiNodedotjs,
   SiNextdotjs,
   SiCplusplus,
+  SiReact,
 } from "react-icons/si";
-import { DiReact } from "react-icons/di";
 
 export interface ISkill {
   name: string;
@@ -35,7 +35,7 @@ export const skillsData: ISkill[] = [
     name: "TypeScript",
   },
   {
-    Icon: DiReact,
+    Icon: SiReact,
     name: "React",
   },
   {

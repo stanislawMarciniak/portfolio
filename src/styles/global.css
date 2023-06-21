@@ -312,21 +312,12 @@ body {
    
 
   /************ Skills Css ************/
-  .skill {
-    padding: 0 0 50px 0;
-    position: relative;
-  }
+
   .skill-bx {
-    background: #151515;
     border-radius: 64px;
     text-align: center;
-    padding: 60px 50px;
-    margin-top: -60px;
   }
-  .skill h2 {
-    font-size: 45px;
-    font-weight: 700;
-  }
+
   .skill p {
       color: #B8B8B8;
       font-size: 18px;
@@ -343,17 +334,9 @@ body {
     width: 50%;
     margin: 0 auto 15px auto;
   }
-  .skill-icon {
-    color: linear-gradient(135deg, pink, blue);
-  }
-
-
-  /************ Projects Css ************/
   
-  .link-button {
-    color: inherit;
-    text-decoration: none;
-  }  
+  /************ Projects Css ************/
+
   
   /************ Contact Css ************/
   .contact {

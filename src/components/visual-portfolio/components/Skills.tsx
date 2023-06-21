@@ -27,12 +27,12 @@ export const Skills = () => {
   };
 
   return (
-    <section className="skill" id="skills">
+    <section className="mb-20 -mt-4 skill" id="skills">
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <div className="skill-bx wow zoomIn">
-              <h2>Skills</h2>
+            <div className="px-16 py-14 bg-darkCustom skill-bx zoomIn">
+              <h2 className="text-5xl font-bold">Skills</h2>
               <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.<br></br> Lorem Ipsum has been the industry's standard
@@ -45,7 +45,12 @@ export const Skills = () => {
               >
                 {skillsData.map((skill, id) => (
                   <div className="flex flex-col items-center" key={id}>
-                    <skill.Icon className="mb-4 text-9xl" />
+                    <div className="p-4 rounded-full">
+                      <skill.Icon
+                        style={{ fill: "url(#blue-gradient)" }}
+                        className="text-9xl"
+                      />
+                    </div>
                     <span className="text-2xl">{skill.name}</span>
                   </div>
                 ))}

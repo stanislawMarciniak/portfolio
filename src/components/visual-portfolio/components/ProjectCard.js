@@ -57,7 +57,7 @@ const DescriptionAndHeader = ({ project }) => {
           target="_blank"
           rel="noreferrer"
           href={project.github_url}
-          className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-800 rounded-md link-button"
+          className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-800 rounded-md text-inherit decoration-transparent hover:text-pink-600"
         >
           <AiFillGithub /> <span>Github</span>
         </a>
@@ -65,7 +65,7 @@ const DescriptionAndHeader = ({ project }) => {
           target="_blank"
           rel="noreferrer"
           href={project.deployed_url}
-          className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-800 rounded-md link-button"
+          className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-800 rounded-md text-inherit decoration-transparent hover:text-pink-600"
         >
           <AiFillProject /> <span>Project</span>
         </a>
