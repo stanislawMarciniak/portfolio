@@ -32,11 +32,13 @@ export const Skills = () => {
         <div className="row">
           <div className="col-12">
             <div className="px-16 py-14 bg-darkCustom skill-bx zoomIn">
-              <h2 className="text-5xl font-bold">Skills</h2>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.<br></br> Lorem Ipsum has been the industry's standard
-                dummy text.
+              <h2 className="mb-8 text-5xl font-bold">Skills</h2>
+              <p className="mb-8 text-lg tracking-wider text-gray-400">
+                I believe I have what it takes to become a web developer. Most
+                of my projects are done using Next.js and its SSR. However, I am
+                now considering switching to Vite becouse of its fast
+                development experience. Currently, I am making my projects
+                increasingly complex, so I am learning TypeScript and Docker.
               </p>
               <Carousel
                 responsive={responsive}

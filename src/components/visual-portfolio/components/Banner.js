@@ -12,7 +12,7 @@ export const Banner = () => {
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = ["Aspiring Fullstack Developer", "Fullstack Developer"];
+  const toRotate = ["Web Developer", "Fullstack Developer"];
   const period = 2000;
 
   useEffect(() => {
@@ -79,9 +79,8 @@ export const Banner = () => {
                     of Technology. I love to learn new things and technologies
                     thats why I am looking for first work experience as a{" "}
                     <b>Fullstack Developer</b>. I would like to broaden my
-                    horizonts with practical knowledge. Currently, I am learning
-                    TypeScript and Docker. I am motivated and ready to work hard
-                    and develop my coding skills.
+                    horizonts with practical knowledge. I am motivated and ready
+                    to work hard and develop my coding skills.
                   </p>
                   <button onClick={() => console.log("connect")}>
                     Let’s Connect <ArrowRightCircle size={25} />

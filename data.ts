@@ -9,6 +9,7 @@ import {
   SiNextdotjs,
   SiCplusplus,
   SiReact,
+  SiSupabase,
 } from "react-icons/si";
 
 export interface ISkill {
@@ -45,6 +46,10 @@ export const skillsData: ISkill[] = [
   {
     Icon: SiNextdotjs,
     name: "Next.js",
+  },
+  {
+    Icon: SiSupabase,
+    name: "Supabase",
   },
   {
     Icon: SiGithub,

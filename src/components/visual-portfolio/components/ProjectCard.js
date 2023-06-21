@@ -26,14 +26,16 @@ export const ProjectCard = ({ project, index }) => {
 
 const ProjectImage = ({ project }) => {
   return (
-    <Image
-      className="rounded-2xl"
-      layout="intrinsic"
-      width={792}
-      height={388}
-      src={project.image_path}
-      alt=""
-    />
+    <a target="_blank" rel="noreferrer" href={project.deployed_url}>
+      <Image
+        className="rounded-2xl hover:scale-95"
+        layout="intrinsic"
+        width={792}
+        height={388}
+        src={project.image_path}
+        alt=""
+      />
+    </a>
   );
 };
 
@@ -57,7 +59,7 @@ const DescriptionAndHeader = ({ project }) => {
           target="_blank"
           rel="noreferrer"
           href={project.github_url}
-          className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-800 rounded-md text-inherit decoration-transparent hover:text-pink-600"
+          className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-800 rounded-md text-inherit decoration-transparent hover:text-fuchsia-600"
         >
           <AiFillGithub /> <span>Github</span>
         </a>
@@ -65,7 +67,7 @@ const DescriptionAndHeader = ({ project }) => {
           target="_blank"
           rel="noreferrer"
           href={project.deployed_url}
-          className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-800 rounded-md text-inherit decoration-transparent hover:text-pink-600"
+          className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-800 rounded-md text-inherit decoration-transparent hover:text-fuchsia-600"
         >
           <AiFillProject /> <span>Project</span>
         </a>

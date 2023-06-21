@@ -77,6 +77,7 @@ body {
 .link {
   color: #80ad73;
   text-shadow: 0 0 3px #80ad73; 
+  text-decoration: none;
 }
 
 .link:hover {
@@ -318,19 +319,12 @@ body {
     text-align: center;
   }
 
-  .skill p {
-      color: #B8B8B8;
-      font-size: 18px;
-      letter-spacing: 0.8px;
-      line-height: 1.5em;
-      margin: 14px 0 75px 0;
-  }
   .skill-slider {
     width: 80%;
     margin: 0 auto;
     position: relative;
   }
-  .skill-slider .item img {
+  .skill-slider .item {
     width: 50%;
     margin: 0 auto 15px auto;
   }
