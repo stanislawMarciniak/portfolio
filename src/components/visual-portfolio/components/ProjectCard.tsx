@@ -3,7 +3,7 @@ import { AiFillGithub, AiFillProject } from "react-icons/ai";
 import { useMediaQuery } from "@chakra-ui/react";
 
 export const ProjectCard = ({ project, index }) => {
-  const [isSmallerThanLg] = useMediaQuery("(max-width: 992px)");
+  const [isSmallerThanLg] = useMediaQuery("(max-width: 1024px)");
   return (
     <div>
       {index % 2 || isSmallerThanLg ? (
