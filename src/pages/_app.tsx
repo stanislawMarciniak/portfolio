@@ -5,10 +5,9 @@ import { wrapper } from "../redux/store";
 import { useDispatch, useSelector } from "react-redux";
 import { selectFoldedState } from "../redux/folder";
 import { Portfolio } from "../components/visual-portfolio/Portfolio";
-import { createTheme, ThemeProvider } from "@mui/material";
 import { fold } from "../redux/folder";
 import Loading from "../components/Loading";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import themeConfig from "../config/theme";
 
 const App = ({ Component, pageProps }) => {
@@ -29,18 +28,6 @@ const App = ({ Component, pageProps }) => {
   const onClickAnywhere = () => {
     inputRef.current.focus();
   };
-
-  const theme = createTheme({
-    breakpoints: {
-      values: {
-        xs: 0,
-        sm: 640,
-        md: 768,
-        lg: 1024,
-        xl: 1280,
-      },
-    },
-  });
 
   if (isLoading) {
     return <Loading />;
@@ -65,22 +52,20 @@ const App = ({ Component, pageProps }) => {
         `}
       </style>
       <ChakraProvider theme={themeConfig}>
-        <ThemeProvider theme={theme}>
-          {folded ? (
-            <div className="text-dark-foreground portfolio">
-              <Portfolio />
-            </div>
-          ) : (
-            <div
-              className="flex items-center justify-center text-xs text-dark-foreground min-w-max md:min-w-full md:text-base"
-              onClick={onClickAnywhere}
-            >
-              <main className="w-2/3 px-1 py-1 shadow-2xl bg-dark-background rounded-2xl h-5/6">
-                <Component {...pageProps} inputRef={inputRef} />
-              </main>
-            </div>
-          )}
-        </ThemeProvider>
+        {folded ? (
+          <div className="text-dark-foreground portfolio">
+            <Portfolio />
+          </div>
+        ) : (
+          <div
+            className="flex items-center justify-center text-xs text-dark-foreground min-w-max md:min-w-full md:text-base"
+            onClick={onClickAnywhere}
+          >
+            <main className="w-2/3 px-1 py-1 shadow-2xl bg-dark-background rounded-2xl h-5/6">
+              <Component {...pageProps} inputRef={inputRef} />
+            </main>
+          </div>
+        )}
       </ChakraProvider>
     </>
   );

@@ -29,7 +29,6 @@ const handler = async (req, res) => {
     if (!data || !data.name || !data.email || !data.subject || !data.message) {
       return res.status(400).send({ message: "Bad request" });
     }
-
     try {
       await transporter.sendMail({
         ...mailOptions,
@@ -43,6 +42,6 @@ const handler = async (req, res) => {
       return res.status(400).json({ message: err.message });
     }
   }
-  return res.status(400).json({ message: "Bad request" });
+  return res.status(400).json({ message: "stasiek" });
 };
 export default handler;

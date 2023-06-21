@@ -1,12 +1,9 @@
 import Image from "next/image";
-import { useMediaQuery } from "@mui/material";
 import { AiFillGithub, AiFillProject } from "react-icons/ai";
+import { useMediaQuery } from "@chakra-ui/react";
 
 export const ProjectCard = ({ project, index }) => {
-  const isSmallerThanLg = useMediaQuery((theme) =>
-    theme.breakpoints.down("lg")
-  );
-
+  const [isSmallerThanLg] = useMediaQuery("(max-width: 992px)");
   return (
     <div>
       {index % 2 || isSmallerThanLg ? (

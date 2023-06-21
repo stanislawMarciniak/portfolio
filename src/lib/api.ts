@@ -1,4 +1,4 @@
-export const sendContactForm = async (data) =>
+export const sendContactForm = async (data) => {
   fetch("/api/contact", {
     method: "POST",
     body: JSON.stringify(data),
@@ -7,3 +7,4 @@ export const sendContactForm = async (data) =>
     if (!res.ok) throw new Error("Failed to send message");
     return res.json();
   });
+};

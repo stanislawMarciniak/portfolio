@@ -1,24 +1,4 @@
 import contactImg from "/public/assets/img/contact-img.svg";
-// import Image from "next/image";
-// import { Col, Container, Row } from "react-bootstrap";
-
-// export const Contact = () => {
-//   return (
-//     <section className="contact" id="connect">
-//       <Container>
-//         <Row className="align-items-center">
-//           <Col size={12} md={6}>
-//             <Image src={contactImg} alt="Contact Us" />
-//           </Col>
-//           <Col size={12} md={6}>
-//             <h2>Get In Touch</h2>
-//           </Col>
-//         </Row>
-//       </Container>
-//     </section>
-//   );
-// };
-
 import {
   Box,
   Button,
@@ -36,7 +16,6 @@ import {
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { sendContactForm } from "../../../lib/api";
-import { Col, Row } from "react-bootstrap";
 import Image from "next/image";
 
 const initValues = { name: "", email: "", subject: "", message: "" };
@@ -53,7 +32,7 @@ export const Contact = () => {
   const onBlur = ({ target }) =>
     setTouched((prev) => ({ ...prev, [target.name]: true }));
 
-  const handleChange = ({ target }) =>
+  const handleChange = ({ target }) => {
     setState((prev) => ({
       ...prev,
       values: {
@@ -61,6 +40,7 @@ export const Contact = () => {
         [target.name]: target.value,
       },
     }));
+  };
 
   const onSubmit = async () => {
     setState((prev) => ({
@@ -88,10 +68,10 @@ export const Contact = () => {
 
   return (
     <Center className="contact">
-      <Flex>
+      <Flex gap={16}>
         <Image src={contactImg} alt="Contact Us" />
 
-        <Box>
+        <Box className="w-1/2">
           <Heading>Get In Touch</Heading>
           {error && (
             <Text color="red.300" my={4} fontSize="xl">
