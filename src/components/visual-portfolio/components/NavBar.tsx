@@ -64,7 +64,7 @@ export const NavBar = ({ scrolled }) => {
           variant="unstyled"
           fontWeight="light"
         >
-          <Flex align="center" justify="space-around" gap={4} fontSize="3xl">
+          <Flex align="center" justify="space-around" gap={4} fontSize="xl">
             <Box>Resume</Box>
             <FiExternalLink />
           </Flex>
@@ -74,7 +74,7 @@ export const NavBar = ({ scrolled }) => {
           w="5xl"
           justify="space-around"
           align={"center"}
-          fontSize={{ lg: "xl", xl: "3xl" }}
+          fontSize={{ lg: "xl", xl: "xl" }}
         >
           <a href="#home" onClick={(e) => handleSmoothScroll(e, "#home")}>
             Home
@@ -100,7 +100,7 @@ export const NavBar = ({ scrolled }) => {
               align="center"
               justify="space-around"
               gap={4}
-              fontSize={{ lg: "xl", xl: "3xl" }}
+              fontSize={{ lg: "xl", xl: "xl" }}
             >
               <Box>Resume</Box>
               <FiExternalLink />
