@@ -6,6 +6,7 @@ import { Ps1 } from "./Ps1";
 import { useDispatch, useSelector } from "react-redux";
 import { fold, unfold } from "../redux/folder";
 import { selectFoldedState } from "../redux/folder";
+import { useMediaQuery } from "@chakra-ui/react";
 
 export const Input = ({
   inputRef,
@@ -20,6 +21,7 @@ export const Input = ({
 }) => {
   const dispatch = useDispatch();
   const folded = useSelector(selectFoldedState);
+  const [isSmallerThanLg] = useMediaQuery("(max-width: 1024px)");
 
   const onSubmit = async (event: React.KeyboardEvent<HTMLInputElement>) => {
     const commands: [string] = history
@@ -89,16 +91,17 @@ export const Input = ({
 
   return (
     <div className="flex flex-row space-x-2">
-      <label htmlFor="prompt" className="min-w-fit">
-        <Ps1 />
-      </label>
-
+      {folded && isSmallerThanLg ? null : (
+        <label htmlFor="prompt" className="min-w-fit">
+          <Ps1 />
+        </label>
+      )}
       <input
         placeholder={folded ? "type open ;)" : ""}
         ref={inputRef}
         id="prompt"
         type="text"
-        className={`bg-dark-background focus:outline-none flex-grow ${
+        className={`bg-dark-background focus:outline-none flex-grow w-1/3 ${
           commandExists(command) || command === ""
             ? "text-dark-green"
             : "text-dark-red"
