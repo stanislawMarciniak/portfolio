@@ -105,8 +105,6 @@ div#__next > div {
 ::-webkit-scrollbar-thumb:hover {
   background: #2edce2;
 }
-
- 
   /************ Navbar Css ************/
 
   .custom-navbar {
@@ -120,11 +118,8 @@ div#__next > div {
   
   .custom-navbar.scrolled {
     padding: 25px 0;
-    background-color: #121212;
+    background-color: rgba(18, 18, 18, 0.7);
   }
-  
-  
-
   /************ Banner Css ************/
   .banner {
     margin-top: 0;
@@ -178,8 +173,6 @@ div#__next > div {
           transform: translateY(-20px);
       }
   }
-   
-
   /************ Skills Css ************/
 
   .skill-bx {
@@ -198,11 +191,9 @@ div#__next > div {
   }
   
   /************ Projects Css ************/
-
   
   /************ Contact Css ************/
   .contact {
     background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
     padding: 60px 0 40px 0;
   }
-  
