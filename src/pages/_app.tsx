@@ -53,12 +53,12 @@ const App = ({ Component, pageProps }) => {
       </style>
       <ChakraProvider theme={themeConfig}>
         {folded ? (
-          <div className="text-dark-foreground portfolio">
+          <div className="text-dark-foreground app">
             <Portfolio />
           </div>
         ) : (
           <div
-            className="flex items-center justify-center text-xs text-dark-foreground min-w-max md:min-w-full md:text-base"
+            className="flex items-center justify-center text-xs text-dark-foreground min-w-max md:min-w-full md:text-base app"
             onClick={onClickAnywhere}
           >
             <main className="w-2/3 px-1 py-1 shadow-2xl bg-dark-background rounded-2xl h-5/6">

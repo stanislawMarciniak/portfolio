@@ -158,10 +158,9 @@ const ContactForm = () => {
       </FormControl>
 
       <Button
-        variant="outline"
-        colorScheme="blue"
+        colorScheme="pink"
         isLoading={isLoading}
-        disabled={
+        isDisabled={
           !values.name || !values.email || !values.subject || !values.message
         }
         onClick={onSubmit}

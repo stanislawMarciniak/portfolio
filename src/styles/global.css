@@ -54,17 +54,17 @@
 * {
   font-family: 'Hack', monospace;
 }
-
 html,
-body,
 body > div:first-child,
+body,
 div#__next,
 div#__next > div {
   height: 100%;
-  overflow: auto;
+  overflow-y: scroll;
+-webkit-overflow-scrolling: touch;
 }
 
-.portfolio {
+.app {
   background: url("/assets/img/banner-bg.png") no-repeat;
   background-size: cover;
 }
@@ -108,6 +108,21 @@ div#__next > div {
 
  
   /************ Navbar Css ************/
+
+  .custom-navbar {
+    padding: 25px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+    transition: 0.32s ease-in-out;
+  }
+  
+  .custom-navbar.scrolled {
+    padding: 25px 0;
+    background-color: #121212;
+  }
+  
   
 
   /************ Banner Css ************/
