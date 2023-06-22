@@ -4,26 +4,29 @@ import "animate.css";
 import TrackVisibility from "react-on-screen";
 import { projectsData } from "../../../../data";
 
-export const Projects = () => {
+export const Projects = ({ id }) => {
   return (
     <section>
-      <Container>
-        <Row>
-          <Col size={12}>
-            <TrackVisibility>
-              <h2 className="flex justify-center text-5xl font-bold mb-14">
-                Projects
-              </h2>
+      <div style={{ position: "relative" }}>
+        <div id={id} className="transparent-element" />
+        <Container>
+          <Row>
+            <Col size={12}>
+              <TrackVisibility>
+                <h2 className="flex justify-center text-5xl font-bold mb-14">
+                  Projects
+                </h2>
 
-              {projectsData.map((project, index) => {
-                return (
-                  <ProjectCard key={index} index={index} project={project} />
-                );
-              })}
-            </TrackVisibility>
-          </Col>
-        </Row>
-      </Container>
+                {projectsData.map((project, index) => {
+                  return (
+                    <ProjectCard key={index} index={index} project={project} />
+                  );
+                })}
+              </TrackVisibility>
+            </Col>
+          </Row>
+        </Container>
+      </div>
     </section>
   );
 };

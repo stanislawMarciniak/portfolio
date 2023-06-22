@@ -6,7 +6,7 @@ import "animate.css";
 import TrackVisibility from "react-on-screen";
 import Image from "next/image";
 
-export const Banner = () => {
+export const Banner = ({ id }) => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
@@ -53,7 +53,7 @@ export const Banner = () => {
   };
 
   return (
-    <section className="banner" id="home">
+    <section className="banner" id={id}>
       <Container>
         <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7}>

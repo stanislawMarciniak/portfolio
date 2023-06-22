@@ -27,7 +27,7 @@ export const Portfolio = () => {
   }, []);
 
   return (
-    <div style={{ height: "100vh", overflowY: "auto" }}>
+    <div>
       <svg width="0" height="0">
         <linearGradient id="blue-gradient" x1="100%" y1="100%" x2="0%" y2="0%">
           <stop stopColor="#4D3CEB" offset="0%" />
@@ -37,12 +37,12 @@ export const Portfolio = () => {
       <NavBar scrolled={scrolled} />
       <div
         ref={scrollingElementRef}
-        style={{ overflowY: "scroll", height: "calc(100vh - 68px)" }}
+        style={{ overflowY: "scroll", height: "calc(100vh)" }}
       >
-        <Banner />
-        <Skills />
-        <Projects />
-        <Contact />
+        <Banner id="home" />
+        <Skills id="skills" />
+        <Projects id="projects" />
+        <Contact id="contact" />
       </div>
     </div>
   );

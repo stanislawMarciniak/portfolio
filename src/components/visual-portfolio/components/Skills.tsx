@@ -2,7 +2,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { skillsData } from "../../../../data";
 
-export const Skills = () => {
+export const Skills = ({ id }) => {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -27,7 +27,8 @@ export const Skills = () => {
   };
 
   return (
-    <section className="mb-20 -mt-4 skill" id="skills">
+    <section className="mb-20 -mt-4 skill" style={{ position: "relative" }}>
+      <div id={id} className="transparent-element" />
       <div className="container">
         <div className="row">
           <div className="col-12">

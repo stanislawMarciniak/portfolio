@@ -23,11 +23,11 @@ const initValues = { name: "", email: "", subject: "", message: "" };
 
 const initState = { isLoading: false, error: "", values: initValues };
 
-export const Contact = () => {
+export const Contact = ({ id }) => {
   const [isSmallerThanLg] = useMediaQuery("(max-width: 1024px)");
 
   return (
-    <Center className="contact">
+    <Center className="contact" id={id}>
       {isSmallerThanLg ? (
         <VStack gap={16}>
           <ContactForm />
