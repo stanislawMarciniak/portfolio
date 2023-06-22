@@ -9,8 +9,8 @@ import { selectFoldedState } from "../redux/folder";
 import { useMediaQuery } from "@chakra-ui/react";
 
 export const Input = ({
-  inputRef,
-  containerRef,
+  inputRef = null,
+  containerRef = null,
   command,
   history,
   lastCommandIndex,

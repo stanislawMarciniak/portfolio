@@ -25,6 +25,21 @@ export const Banner = ({ id }) => {
     };
   }, [text]);
 
+  const handleSmoothScroll = (event, target) => {
+    event.preventDefault();
+    const element = document.querySelector(target);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+      });
+
+      const path = window.location.pathname;
+      const hash = target.slice(1);
+      const url = path + "#" + hash;
+      window.history.pushState(null, "", url);
+    }
+  };
+
   const tick = () => {
     let i = loopNum % toRotate.length;
     let fullText = toRotate[i];
@@ -81,9 +96,14 @@ export const Banner = ({ id }) => {
                     horizonts with practical knowledge. I am motivated and ready
                     to work hard and develop my coding skills.
                   </p>
-                  <button onClick={() => console.log("connect")}>
-                    Let’s Connect <ArrowRightCircle size={25} />
-                  </button>
+                  <a
+                    href="#contact"
+                    onClick={(e) => handleSmoothScroll(e, "#contact")}
+                  >
+                    <button>
+                      Let’s Connect <ArrowRightCircle size={25} />
+                    </button>
+                  </a>
                 </div>
               )}
             </TrackVisibility>

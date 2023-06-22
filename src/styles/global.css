@@ -175,13 +175,13 @@ div#__next > div {
   }
   @keyframes updown {
       0% {
-          transform: translateY(-20px);
+          transform: translateY(-18px);
       }
       50% {
-          transform: translateY(20px);
+          transform: translateY(22px);
       }
       100% {
-          transform: translateY(-20px);
+          transform: translateY(-18px);
       }
   }
   /************ Skills Css ************/
