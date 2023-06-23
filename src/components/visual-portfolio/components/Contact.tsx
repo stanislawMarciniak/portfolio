@@ -19,11 +19,33 @@ import { useState } from "react";
 import { sendContactForm } from "../../../lib/api";
 import Image from "next/image";
 
-const initValues = { name: "", email: "", subject: "", message: "" };
+interface FormValues {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
 
-const initState = { isLoading: false, error: "", values: initValues };
+interface State {
+  isLoading: boolean;
+  error: string;
+  values: FormValues;
+}
 
-export const Contact = ({ id }) => {
+const initValues: FormValues = {
+  name: "",
+  email: "",
+  subject: "",
+  message: "",
+};
+
+const initState: State = {
+  isLoading: false,
+  error: "",
+  values: initValues,
+};
+
+export const Contact = ({ id }: { id: string }) => {
   const [isSmallerThanLg] = useMediaQuery("(max-width: 1024px)");
 
   return (
@@ -45,15 +67,19 @@ export const Contact = ({ id }) => {
 
 const ContactForm = () => {
   const toast = useToast();
-  const [state, setState] = useState(initState);
-  const [touched, setTouched] = useState({});
+  const [state, setState] = useState<State>(initState);
+  const [touched, setTouched] = useState<Record<string, boolean>>({});
 
   const { values, isLoading, error } = state;
 
-  const onBlur = ({ target }) =>
+  const onBlur = ({
+    target,
+  }: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setTouched((prev) => ({ ...prev, [target.name]: true }));
 
-  const handleChange = ({ target }) => {
+  const handleChange = ({
+    target,
+  }: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setState((prev) => ({
       ...prev,
       values: {
@@ -146,7 +172,6 @@ const ContactForm = () => {
       >
         <FormLabel>Message</FormLabel>
         <Textarea
-          type="text"
           name="message"
           rows={4}
           errorBorderColor="red.300"
