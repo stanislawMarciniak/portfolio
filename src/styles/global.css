@@ -70,6 +70,11 @@ div#__next > div {
   background-size: cover;
 }
 
+.loading {
+  background: url("/assets/img/banner-bg.png") no-repeat;
+  background-size: cover;
+}
+
 .command {
   color: #73ABAD;
   text-shadow: 0 0 3px #73ABAD; 
