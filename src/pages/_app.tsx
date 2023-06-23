@@ -16,22 +16,22 @@ const App = ({ Component, pageProps }) => {
   const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      await dispatch(fold());
-      setIsLoading(false);
-    };
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     await dispatch(fold());
+  //     setIsLoading(false);
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
   const onClickAnywhere = () => {
     inputRef.current.focus();
   };
 
-  if (isLoading) {
-    return <Loading />;
-  }
+  // if (isLoading) {
+  //   return <Loading />;
+  // }
 
   return (
     <>

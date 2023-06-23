@@ -60,9 +60,10 @@ body,
 div#__next,
 div#__next > div {
   height: 100%;
-  overflow-y: scroll;
+  overflow-y: hidden;
 -webkit-overflow-scrolling: touch;
 }
+
 
 .app {
   background: url("/assets/img/banner-bg.png") no-repeat;
@@ -92,10 +93,7 @@ div#__next > div {
   margin-right: 10px;
 }
 
-::-webkit-scrollbar-track {
-  background: #1e252e;
-  border-radius: 5px;
-}
+
 
 ::-webkit-scrollbar-thumb {
   background: #73ABAD;

@@ -38,7 +38,7 @@ const ProjectImage = ({ project }) => {
 
 const DescriptionAndHeader = ({ project }) => {
   return (
-    <div className="flex flex-col sm:mb-3 lg:mb-0 lg:w-1/3">
+    <div className="flex flex-col mb-4 lg:mb-0 lg:w-1/3">
       <div className="p-3 mb-3 bg-darkCustom rounded-2xl">
         <h4>{project.name}</h4>
         <span>{project.description}</span>

@@ -41,6 +41,7 @@ export const NavBar = ({ scrolled }) => {
       justify="space-around"
       fontSize="xl"
       className={`custom-navbar${scrolled ? " scrolled" : ""}`}
+      gap={2}
     >
       <div
         style={{ height: "100%" }}
@@ -64,18 +65,18 @@ export const NavBar = ({ scrolled }) => {
           variant="unstyled"
           fontWeight="light"
         >
-          <Flex align="center" justify="space-around" gap={4} fontSize="xl">
+          <Flex
+            align="center"
+            justify="space-around"
+            gap={4}
+            fontSize={{ sm: "md", md: "lg", lg: "xl", xl: "xl" }}
+          >
             <Box>Resume</Box>
             <FiExternalLink />
           </Flex>
         </Button>
       ) : (
-        <Flex
-          w="5xl"
-          justify="space-around"
-          align={"center"}
-          fontSize={{ lg: "xl", xl: "xl" }}
-        >
+        <Flex w="5xl" justify="space-around" align={"center"} fontSize="xl">
           <a href="#home" onClick={(e) => handleSmoothScroll(e, "#home")}>
             Home
           </a>
@@ -96,12 +97,7 @@ export const NavBar = ({ scrolled }) => {
             variant="unstyled"
             fontWeight="light"
           >
-            <Flex
-              align="center"
-              justify="space-around"
-              gap={4}
-              fontSize={{ lg: "xl", xl: "xl" }}
-            >
+            <Flex align="center" justify="space-around" gap={4} fontSize="xl">
               <Box>Resume</Box>
               <FiExternalLink />
             </Flex>
