@@ -31,7 +31,7 @@ export const NavBar = ({ scrolled }) => {
   };
 
   const handleResumeClick = () => {
-    const pdfUrl = "/resumecv.pdf";
+    const pdfUrl = "/resume.pdf";
     window.open(pdfUrl);
   };
 

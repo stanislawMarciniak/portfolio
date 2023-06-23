@@ -37,7 +37,7 @@ export const Skills = ({ id }) => {
               <p className="mb-8 text-lg tracking-wider text-gray-400">
                 I believe I have what it takes to become a web developer. Most
                 of my projects are done using Next.js and its SSR. However, I am
-                now considering switching to Vite becouse of its fast
+                now considering switching to Vite because of its fast
                 development experience. Currently, I am making my projects
                 increasingly complex, so I am learning TypeScript and Docker.
               </p>

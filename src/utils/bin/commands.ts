@@ -29,7 +29,7 @@ More about me:
 };
 
 export const resume = async (args: string[]): Promise<string> => {
-  const pdfUrl = "/resumecv.pdf";
+  const pdfUrl = "/resume.pdf";
   window.open(pdfUrl);
 
   return "Opening resume...";
