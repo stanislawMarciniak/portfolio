@@ -102,7 +102,7 @@ const ContactForm = () => {
         title: "Message sent.",
         status: "success",
         duration: 2000,
-        position: "top",
+        position: "bottom",
       });
     } catch (error) {
       setState((prev) => ({
