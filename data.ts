@@ -2,10 +2,8 @@ import { IconType } from "react-icons";
 import {
   SiGithub,
   SiLinux,
-  SiPostman,
   SiTailwindcss,
   SiTypescript,
-  SiNodedotjs,
   SiNextdotjs,
   SiCplusplus,
   SiReact,
@@ -37,10 +35,6 @@ export const skillsData: ISkill[] = [
     name: "React",
   },
   {
-    Icon: SiNodedotjs,
-    name: "Node.js",
-  },
-  {
     Icon: SiNextdotjs,
     name: "Next.js",
   },
@@ -65,16 +59,28 @@ export const skillsData: ISkill[] = [
     name: "Linux",
   },
   {
-    Icon: SiPostman,
-    name: "Postman",
-  },
-  {
     Icon: SiCplusplus,
     name: "C++",
   },
 ];
 
 export const projectsData: IProject[] = [
+  {
+    name: "Clavvs",
+    image_path: "/images/clavvs.png",
+    deployed_url: "https://clavvs.netlify.app/",
+    github_url: "https://github.com/stanislawMarciniak/nails",
+    description:
+      "This is a web page I made for my girlfriend to help her organize her schedule. She uses it on a daily basis. This web application allows users to conveniently book appointments and enroll in a nail salon. Users can easily browse available services, select preferred time slots, and provide necessary information for booking and enrollment. The admin has the ability to confirm/reject meetings and has insight into the entire meeting history.",
+    key_techs: [
+      "Vite",
+      "React",
+      "Supabase",
+      "PostgreSQL",
+      "Chakra UI",
+      "Typescript",
+    ],
+  },
   {
     name: "Swiftboard",
     image_path: "/images/swiftboard.png",
@@ -84,6 +90,7 @@ export const projectsData: IProject[] = [
       "It is an onboarding platform that utilizes AI to make the onboarding process as straight-forward as possible for the employers as well as the onboarded employees. It is a group project and I was responsible for employer dashboard. The project won the hackathon Hack na Zdrowie 2.",
     key_techs: [
       "Vite",
+      "React",
       "Supabase",
       "PostgreSQL",
       "Chakra UI",
