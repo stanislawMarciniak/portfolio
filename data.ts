@@ -98,15 +98,24 @@ export const projectsData: IProject[] = [
     github_url: "https://github.com/stanislawMarciniak/tictactoe_online",
     description:
       "This app is a WebSocket application that enables two players on different devices to play the game in real-time and chat with each other. The game also features a login and registration page and uses cookies for user authentication.",
-    key_techs: ["React", "Getstream.io", "Axios", "Express", "Cookies"],
+    key_techs: ["JavaScript", "React", "Getstream.io", "Axios", "Express"],
   },
   {
     name: "Weather app",
     image_path: "/images/weather.png",
-    deployed_url: "https://weather-forecast-app-sm.netlify.app",
+    deployed_url: "https://weatherforecast-sm.netlify.app/",
     github_url: "https://github.com/stanislawMarciniak/weather-app",
     description:
       "An extensive weather application that provides daily and hourly forecasts for a searched city or the user's current location.",
-    key_techs: ["React", "Tailwind", "OpenWeather API"],
+    key_techs: ["JavaScript", "React", "Tailwind", "OpenWeather API"],
+  },
+  {
+    name: "Space Invaders",
+    image_path: "/images/spaceinvaders.png",
+    deployed_url: "",
+    github_url: "",
+    description:
+      "Space Invaders is a classic arcade game implemented in C++ with SFML graphics library. Developed as a university Object Oriented Programming project, it demonstrates the use of design patterns such as Singleton, Factory, Observer, and State. Unit testing ensures code reliability.",
+    key_techs: ["C++", "SFML", "Boost"],
   },
 ];
