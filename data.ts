@@ -71,7 +71,7 @@ export const projectsData: IProject[] = [
     deployed_url: "https://clavvs.netlify.app/",
     github_url: "https://github.com/stanislawMarciniak/nails",
     description:
-      "This is a web page I made for my girlfriend to help her organize her schedule. She uses it on a daily basis. This web application allows users to conveniently book appointments and enroll in a nail salon. Users can easily browse available services, select preferred time slots, and provide necessary information for booking and enrollment. The admin has the ability to confirm/reject meetings and has insight into the entire meeting history.",
+      "This is a web page I made for my friend to help her organize her schedule. She uses it on a daily basis. This web application allows users to conveniently book appointments and enroll in a nail salon. Users can easily browse available services, select preferred time slots, and provide necessary information for booking and enrollment. The admin has the ability to confirm/reject meetings and has insight into the entire meeting history.",
     key_techs: [
       "Vite",
       "React",
@@ -120,9 +120,9 @@ export const projectsData: IProject[] = [
     name: "Space Invaders",
     image_path: "/images/spaceinvaders.png",
     deployed_url: "",
-    github_url: "",
+    github_url: "https://github.com/stanislawMarciniak/SpaceInvaders",
     description:
-      "Space Invaders is a classic arcade game implemented in C++ with SFML graphics library. Developed as a university Object Oriented Programming project, it demonstrates the use of design patterns such as Singleton, Factory, Observer, and State. Unit testing ensures code reliability.",
+      "Space Invaders is a classic arcade game implemented in C++ with the SFML graphics library. Developed with my friend as a university Object Oriented Programming project, it demonstrates the use of design patterns such as Singleton, Factory, Observer, and State. Additionally, during the project, I learned how to create unit tests.",
     key_techs: ["C++", "SFML", "Boost"],
   },
 ];

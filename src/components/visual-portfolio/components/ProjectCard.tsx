@@ -24,14 +24,14 @@ export const ProjectCard = ({ project, index }) => {
 const ProjectImage = ({ project }) => {
   return (
     <a target="_blank" rel="noreferrer" href={project.deployed_url}>
-      <Image
-        className="rounded-2xl hover:scale-95"
-        layout="intrinsic"
-        width={792}
-        height={388}
-        src={project.image_path}
-        alt=""
-      />
+      <div className="w-[792px] h-[500px] relative hover:scale-95">
+        <Image
+          layout="fill"
+          objectFit="contain"
+          src={project.image_path}
+          alt={project.name}
+        />
+      </div>
     </a>
   );
 };
@@ -60,14 +60,16 @@ const DescriptionAndHeader = ({ project }) => {
         >
           <AiFillGithub /> <span>Github</span>
         </a>
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href={project.deployed_url}
-          className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-800 rounded-md text-inherit decoration-transparent hover:text-fuchsia-600"
-        >
-          <AiFillProject /> <span>Project</span>
-        </a>
+        {project.deployed_url && (
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href={project.deployed_url}
+            className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-800 rounded-md text-inherit decoration-transparent hover:text-fuchsia-600"
+          >
+            <AiFillProject /> <span>Project</span>
+          </a>
+        )}
       </div>
     </div>
   );

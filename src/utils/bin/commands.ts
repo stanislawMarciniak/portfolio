@@ -52,9 +52,11 @@ export const repo = async (args: string[]): Promise<string> => {
 
 //Projects
 export const projects = async (args: string[]): Promise<string> => {
-  const projectsList = projectsData.map(
-    (project) =>
-      `<div class="project-terminal"><b>${project.name}</b> - ${
+  const data = [...projectsData];
+  data.reverse();
+  const projectsList = data.map((project) => {
+    if (project.deployed_url) {
+      return `<div class="project-terminal"><b>${project.name}</b> - ${
         project.description
       } \n\nTech stack: ${project.key_techs.join(
         ", "
@@ -62,11 +64,19 @@ export const projects = async (args: string[]): Promise<string> => {
         project.deployed_url
       } class="link">Web Page</a> - <a target="_blank" href=${
         project.github_url
-      } class="link">Github Repo</a>\n</div>`
-  );
-  return `Here is some of my latest projects:\n
-${projectsList.join("\n")}
-`;
+      } class="link">Github Repo</a>\n</div>`;
+    } else {
+      return `<div class="project-terminal"><b>${project.name}</b> - ${
+        project.description
+      } \n\nTech stack: ${project.key_techs.join(
+        ", "
+      )} \n\n<a target="_blank" href=${
+        project.github_url
+      } class="link">Github Repo</a>\n</div>`;
+    }
+  });
+
+  return `Here are some of my latest projects:\n\n${projectsList.join("\n")}`;
 };
 
 //EXIT && OPEN
