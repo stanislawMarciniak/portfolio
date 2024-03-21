@@ -33,13 +33,14 @@ export const Skills = ({ id }) => {
         <div className="row">
           <div className="col-12">
             <div className="px-16 py-14 bg-darkCustom skill-bx zoomIn">
-              <h2 className="mb-8 text-5xl font-bold">Skills</h2>
+              <h2 className="mb-8 text-5xl font-bold">
+                Skills and Technologies
+              </h2>
               <p className="mb-8 text-lg tracking-wider text-gray-400">
-                I believe I have what it takes to become a web developer. Most
-                of my projects are done using Next.js and its SSR. However, I am
-                now considering switching to Vite because of its fast
-                development experience. Currently, I am making my projects
-                increasingly complex, so I am learning TypeScript and Docker.
+                Most of my projects are done using Next.js and its SSR. For
+                styling I use mostly Tailwind and Chakra UI. Currently, I am
+                making my projects increasingly complex, so I am learning
+                TypeScript and Docker.
               </p>
               <Carousel
                 responsive={responsive}

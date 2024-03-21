@@ -11,7 +11,6 @@ export const Banner = ({ id }) => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const [index, setIndex] = useState(1);
   const toRotate = ["Web Developer", "Fullstack Developer"];
   const period = 2000;
 
@@ -55,15 +54,11 @@ export const Banner = ({ id }) => {
 
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
-      setIndex((prevIndex) => prevIndex - 1);
       setDelta(period);
     } else if (isDeleting && updatedText === "") {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
-      setIndex(1);
       setDelta(500);
-    } else {
-      setIndex((prevIndex) => prevIndex + 1);
     }
   };
 
@@ -79,15 +74,12 @@ export const Banner = ({ id }) => {
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
                 >
-                  <h1>
-                    {`Hi! I'm Stasiek`}{" "}
-                    <span
-                      className="txt-rotate"
-                      data-rotate='[ "Web Developer", "Fullstack Developer" ]'
-                    >
-                      <span className="wrap">{text}</span>
+                  <h2>{`Hi! I'm Stasiek`}</h2>
+                  <h2>
+                    <span className="txt-rotate">
+                      <span className="inline-block wrap">{text}</span>
                     </span>
-                  </h1>
+                  </h2>
                   <p>
                     My name is <b>Stanisław</b>! I am a freshman at University
                     of Technology. I love to learn new things and technologies

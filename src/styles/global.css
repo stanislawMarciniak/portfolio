@@ -140,7 +140,8 @@ div#__next > div {
     padding: 260px 0 100px 0;
   }
   
-  .banner h1 {
+  .banner h2 {
+    height: max-content;
     font-size: 65px;
     font-weight: 700;
     letter-spacing: 0.8px;

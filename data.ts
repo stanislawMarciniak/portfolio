@@ -9,6 +9,7 @@ import {
   SiReact,
   SiSupabase,
   SiChakraui,
+  SiJavascript,
 } from "react-icons/si";
 
 export interface ISkill {
@@ -29,6 +30,10 @@ export const skillsData: ISkill[] = [
   {
     Icon: SiTypescript,
     name: "TypeScript",
+  },
+  {
+    Icon: SiJavascript,
+    name: "JavaScript",
   },
   {
     Icon: SiReact,
