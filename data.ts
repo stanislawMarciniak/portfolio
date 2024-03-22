@@ -3,7 +3,6 @@ import {
   SiGithub,
   SiLinux,
   SiTailwindcss,
-  SiTypescript,
   SiNextdotjs,
   SiCplusplus,
   SiReact,
@@ -27,10 +26,6 @@ interface IProject {
 }
 
 export const skillsData: ISkill[] = [
-  {
-    Icon: SiTypescript,
-    name: "TypeScript",
-  },
   {
     Icon: SiJavascript,
     name: "JavaScript",
