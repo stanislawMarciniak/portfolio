@@ -11,7 +11,7 @@ export const Banner = ({ id }) => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const toRotate = ["Web Developer", "Fullstack Developer"];
+  const toRotate = ["Web Developer", "Frontend Developer"];
   const period = 2000;
 
   useEffect(() => {
@@ -84,7 +84,7 @@ export const Banner = ({ id }) => {
                     My name is <b>Stanisław</b>! I am a freshman at University
                     of Technology. I love to learn new things and technologies
                     thats why I am looking for first work experience as a{" "}
-                    <b>Fullstack Developer</b>. I would like to broaden my
+                    <b>Frontend Developer</b>. I would like to broaden my
                     horizonts with practical knowledge. I am motivated and ready
                     to work hard and develop my coding skills.
                   </p>
