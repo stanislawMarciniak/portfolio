@@ -1,1 +1,1 @@
-Hey, that's my portfolio. Enjoy! Link: [Portfolio](https://portfolio-s-m.netlify.app/)
+Hey, that's my portfolio. Enjoy! Link: [https://marciniak.netlify.app/](https://marciniak.netlify.app/)
