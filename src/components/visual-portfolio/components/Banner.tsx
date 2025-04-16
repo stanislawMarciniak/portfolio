@@ -81,9 +81,9 @@ export const Banner = ({ id }) => {
                     </span>
                   </h2>
                   <p>
-                    My name is <strong>Stanisław</strong>! I'm a third-year
+                    My name is <strong>Stanisław</strong>! I’m a third-year
                     student at the University of Technology with a passion for
-                    mathematics and data analysis. I'm seeking my first
+                    mathematics and data analysis. I’m seeking my first
                     professional experience as a Data Analyst with a focus on{" "}
                     <strong>Machine Learning</strong>. I aim to expand my
                     horizons through hands-on knowledge and am especially
