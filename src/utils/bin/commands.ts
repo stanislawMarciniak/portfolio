@@ -39,8 +39,8 @@ export const resume = async (args: string[]): Promise<string> => {
 export const contact = async (args: string[]): Promise<string> => {
   return `
 Mail: <a target="_blank" class='link' href='mailto:${config.email}'>${config.email}</a>
-Github: <a target="_blank" class='link' href='https://github.com/${config.social.github}'>${config.social.github}</a>
-Linkedin: <a target="_blank" class='link' href='https://linkedin.com/in/${config.social.linkedin}'>Stanisław Marciniak</a>\n
+Github: <a target="_blank" class='link' href='https://github.com/${config.social.github}'>https://github.com/${config.social.github}</a>
+Linkedin: <a target="_blank" class='link' href='https://linkedin.com/in/${config.social.linkedin}'>https://linkedin.com/in/${config.social.linkedin}</a>\n
 `;
 };
 
