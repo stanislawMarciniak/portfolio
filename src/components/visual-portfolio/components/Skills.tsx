@@ -37,10 +37,12 @@ export const Skills = ({ id }) => {
                 Skills and Technologies
               </h2>
               <p className="mb-8 text-lg tracking-wider text-gray-400">
-                Most of my projects are done using Next.js and its SSR. For
-                styling I use mostly Tailwind and Chakra UI. Currently, I am
-                making my projects increasingly complex, so I am learning
-                TypeScript and Docker.
+                Most of my projects focus on machine learning using Python and
+                its robust ecosystem. I rely on libraries such as Pandas and
+                NumPy for data processing, and I build models with scikit-learn
+                and TensorFlow. As I work on increasingly complex applications,
+                I’m also learning Docker to streamline model deployment and
+                maintain scalable, reproducible environments.
               </p>
               <Carousel
                 responsive={responsive}

@@ -11,7 +11,7 @@ export const Banner = ({ id }) => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const toRotate = ["Web Developer", "Frontend Developer"];
+  const toRotate = ["Machine Learning Engeneer", "Data Analyst"];
   const period = 2000;
 
   useEffect(() => {
@@ -81,12 +81,16 @@ export const Banner = ({ id }) => {
                     </span>
                   </h2>
                   <p>
-                    My name is <b>Stanisław</b>! I am a freshman at University
-                    of Technology. I love to learn new things and technologies
-                    thats why I am looking for first work experience as a{" "}
-                    <b>Frontend Developer</b>. I would like to broaden my
-                    horizonts with practical knowledge. I am motivated and ready
-                    to work hard and develop my coding skills.
+                    My name is <strong>Stanisław</strong>! I'm a third-year
+                    student at the University of Technology with a passion for
+                    mathematics and data analysis. I'm seeking my first
+                    professional experience as a Data Analyst with a focus on{" "}
+                    <strong>Machine Learning</strong>. I aim to expand my
+                    horizons through hands-on knowledge and am especially
+                    fascinated by how artificial intelligence and machine
+                    learning can solve real-world problems. I’m highly
+                    motivated, ready to work hard, and committed to continuously
+                    developing my coding and analytical skills.
                   </p>
                   <a
                     href="#contact"

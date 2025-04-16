@@ -9,6 +9,10 @@ import {
   SiSupabase,
   SiChakraui,
   SiJavascript,
+  SiPython,
+  SiPandas,
+  SiNumpy,
+  SiDocker,
 } from "react-icons/si";
 
 export interface ISkill {
@@ -26,6 +30,22 @@ interface IProject {
 }
 
 export const skillsData: ISkill[] = [
+  {
+    Icon: SiPython,
+    name: "Python",
+  },
+  {
+    Icon: SiPandas,
+    name: "Pandas",
+  },
+  {
+    Icon: SiNumpy,
+    name: "NumPy",
+  },
+  {
+    Icon: SiDocker,
+    name: "Docker",
+  },
   {
     Icon: SiJavascript,
     name: "JavaScript",
@@ -66,20 +86,22 @@ export const skillsData: ISkill[] = [
 
 export const projectsData: IProject[] = [
   {
-    name: "Clavvs",
-    image_path: "/images/clavvs.png",
-    deployed_url: "https://clavvs.netlify.app/",
-    github_url: "https://github.com/stanislawMarciniak/nails",
+    name: "Semantic Book Recommender",
+    image_path: "/images/semantic-books.png",
+    deployed_url: "",
+    github_url: "https://github.com/stanislawMarciniak/book-recomendations",
     description:
-      "This is a web page I made for my friend to help her organize her schedule. She uses it on a daily basis. This web application allows users to conveniently book appointments and enroll in a nail salon. Users can easily browse available services, select preferred time slots, and provide necessary information for booking and enrollment. The admin has the ability to confirm/reject meetings and has insight into the entire meeting history.",
-    key_techs: [
-      "Typescript",
-      "React",
-      "Chakra UI",
-      "PostgreSQL",
-      "Vite",
-      "Supabase",
-    ],
+      "This project offers personalized book recommendations using natural language processing. It leverages text embeddings and vector search to match user queries with book descriptions, incorporating emotional tone analysis to refine suggestions and enhance the recommendation experience.",
+    key_techs: ["Python", "OpenAI", "Gradio", "LangChain", "ChromaDB"],
+  },
+  {
+    name: "Boston Housing Price Prediction",
+    image_path: "/images/boston-housing.png",
+    deployed_url: "https://house-price-prediction-5ss5.onrender.com/",
+    github_url: "https://github.com/yourusername/housing-prediction",
+    description:
+      "This project uses a linear regression model to estimate Boston housing prices based on historical data. A Flask web application provides real-time predictions by training the model on key factors like crime rate, room count, and transportation access, with thorough data analysis and feature standardization ensuring a reliable outcome.",
+    key_techs: ["Python", "Flask", "scikit-learn", "Pandas", "NumPy", "Docker"],
   },
   {
     name: "Swiftboard",
@@ -93,6 +115,22 @@ export const projectsData: IProject[] = [
       "React",
       "Chakra UI",
       "Docker",
+      "PostgreSQL",
+      "Vite",
+      "Supabase",
+    ],
+  },
+  {
+    name: "Clavvs",
+    image_path: "/images/clavvs.png",
+    deployed_url: "https://clavvs.netlify.app/",
+    github_url: "https://github.com/stanislawMarciniak/nails",
+    description:
+      "This is a web page I made for my friend to help her organize her schedule. She uses it on a daily basis. This web application allows users to conveniently book appointments and enroll in a nail salon. Users can easily browse available services, select preferred time slots, and provide necessary information for booking and enrollment. The admin has the ability to confirm/reject meetings and has insight into the entire meeting history.",
+    key_techs: [
+      "Typescript",
+      "React",
+      "Chakra UI",
       "PostgreSQL",
       "Vite",
       "Supabase",
