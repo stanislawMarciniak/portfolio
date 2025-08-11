@@ -13,6 +13,8 @@ import {
   SiPandas,
   SiNumpy,
   SiDocker,
+  SiTensorflow,
+  SiJupyter,
 } from "react-icons/si";
 
 export interface ISkill {
@@ -41,6 +43,14 @@ export const skillsData: ISkill[] = [
   {
     Icon: SiNumpy,
     name: "NumPy",
+  },
+  {
+    Icon: SiTensorflow,
+    name: "Tensorflow",
+  },
+  {
+    Icon: SiJupyter,
+    name: "Jupyter Notebook",
   },
   {
     Icon: SiDocker,
@@ -86,6 +96,15 @@ export const skillsData: ISkill[] = [
 
 export const projectsData: IProject[] = [
   {
+    name: "AI-Powered AC Optimal Power Flow Solver",
+    image_path: "/images/power-flow-solver.png",
+    deployed_url: "",
+    github_url: "https://github.com/stanislawMarciniak/optimal-power-flow",
+    description:
+      "This project uses neural networks to solve AC Optimal Power Flow problems in electrical power grids. The system predicts optimal generator settings and bus voltages given electricity demand, achieving 500x faster computation than traditional optimization methods while maintaining solution quality for real-time grid operations.",
+    key_techs: ["Python", "PyTorch", "PyPower", "NumPy", "Pandas"],
+  },
+  {
     name: "Semantic Book Recommender",
     image_path: "/images/semantic-books.png",
     deployed_url: "",
@@ -106,7 +125,7 @@ export const projectsData: IProject[] = [
   {
     name: "Swiftboard",
     image_path: "/images/swiftboard.png",
-    deployed_url: "https://swiftboard.netlify.app/",
+    deployed_url: "https://swift-board.netlify.app/",
     github_url: "https://github.com/swift-soft/swift-board",
     description:
       "It is an onboarding platform that utilizes AI to make the onboarding process as straight-forward as possible for the employers as well as the onboarded employees. It is a group project and I was responsible for employer dashboard. The project won the hackathon 'Hack na Zdrowie 2' and 'Forge of Talents'.",

@@ -1,13 +1,4 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
-  useMediaQuery,
-} from "@chakra-ui/react";
+import { Box, Button, Flex, useMediaQuery } from "@chakra-ui/react";
 import Input from "../../input";
 import { useHistory } from "../../history/hook";
 import { FiExternalLink } from "react-icons/fi";
@@ -39,8 +30,8 @@ export const NavBar = ({ scrolled }) => {
     }
   };
 
-  const handleResumeClick = (file) => {
-    const pdfUrl = `/${file}`;
+  const handleResumeClick = () => {
+    const pdfUrl = "/resume.pdf";
     window.open(pdfUrl, "_blank");
   };
 
@@ -69,32 +60,16 @@ export const NavBar = ({ scrolled }) => {
         </div>
       </div>
       {isSmallerThanMd ? (
-        <Menu>
-          {({ isOpen }) => (
-            <>
-              <MenuButton
-                isActive={isOpen}
-                as={Button}
-                variant="unstyled"
-                fontWeight="light"
-                rightIcon={<FiExternalLink />}
-              >
-                <Flex align="center" gap={2}>
-                  Resume
-                  <FiExternalLink />
-                </Flex>
-              </MenuButton>
-              <MenuList>
-                <MenuItem onClick={() => handleResumeClick("resume_en.pdf")}>
-                  English Version
-                </MenuItem>
-                <MenuItem onClick={() => handleResumeClick("resume.pdf")}>
-                  Polish Version
-                </MenuItem>
-              </MenuList>
-            </>
-          )}
-        </Menu>
+        <Button
+          variant="unstyled"
+          fontWeight="light"
+          onClick={handleResumeClick}
+        >
+          <Flex align="center" gap={2}>
+            Resume
+            <FiExternalLink />
+          </Flex>
+        </Button>
       ) : (
         <Flex w="5xl" justify="space-around" align={"center"} fontSize="xl">
           <a href="#home" onClick={(e) => handleSmoothScroll(e, "#home")}>
@@ -112,26 +87,12 @@ export const NavBar = ({ scrolled }) => {
           <a href="#contact" onClick={(e) => handleSmoothScroll(e, "#contact")}>
             Contact
           </a>
-          <Menu>
-            {({ isOpen }) => (
-              <>
-                <MenuButton isActive={isOpen} as={Button} variant="unstyled">
-                  <Flex align="center" gap={2} fontSize="xl">
-                    Resume
-                    <FiExternalLink />
-                  </Flex>
-                </MenuButton>
-                <MenuList>
-                  <MenuItem onClick={() => handleResumeClick("resume_en.pdf")}>
-                    English Version
-                  </MenuItem>
-                  <MenuItem onClick={() => handleResumeClick("resume.pdf")}>
-                    Polish Version
-                  </MenuItem>
-                </MenuList>
-              </>
-            )}
-          </Menu>
+          <Button variant="unstyled" onClick={handleResumeClick}>
+            <Flex align="center" gap={2} fontSize="xl">
+              Resume
+              <FiExternalLink />
+            </Flex>
+          </Button>
         </Flex>
       )}
     </Flex>
